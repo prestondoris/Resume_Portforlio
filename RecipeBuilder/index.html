@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript", src='main.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Palanquin:100" rel="stylesheet">
+	
+  </head>
+  <body>
+    <div id="titleName">
+      <input type="text" id="beerName" placeholder="Beer Name" name="beerName" />
+    </div>
+    
+    <div id="unitBox">
+      <div id="unitBoxHeader">
+        <h4 id="titleUnits"> Unit Selection<h4>
+      </div>
+      <div id=unitBoxBody>
+        <div class='unitBoxVolume'>
+          <div class='BBL'>Barrels</div>
+          <div class='gal'>Gallons</div>
+          <div class='liters'>Liters</div>
+        </div>
+        <div class='unitBoxGravity'>
+          <div class='plato'>&deg;P</div>
+          <div class='specGrav'>SG</div>
+        </div>
+        <div class='unitBoxWeight'>
+          <div class='pounds'>Pounds</div>
+          <div class='kilograms'>Kilograms</div>
+        </div>
+        <div class="unitBoxTemp">
+          <div class="fahrenheit">&deg;F</div>
+          <div class="celsius">&deg;C</div>
+        </div>
+      </div>
+      <div id=unitBoxFooter></div>
+    </div>
+      
+    <div id="userInput">      
+      <div id="userInputHeader">
+        <h4 id="titleUserInput">Recipe Set Points</h4>
+      </div>
+      <div class='userInputBody'>
+        <div id="gravities">
+          <div id="volume">
+            <h4 id="titleVolume">Volume</h4>
+            <div class="userInputsInputDiv" id="volumeValueDiv">
+              <input type='number' class='gravity' id="volumeValue" name='Volume' placeholder='Insert Volume' />
+              <label for="volumeValue" id="volumeValueLabel" class="inputLabel"></label>
+            </div>  
+          </div>
+
+          <div class='ABVbox'>
+            <h4 id="titleABV">Alcohol by Volume</h4>
+            <div class="userInputsInputDiv" id="ABVDiv">  
+              <input type='number' class='gravity' id="ABV" name='ABV' placeholder='Insert ABV' />
+              <label for="ABV" id="ABVLabel" class="inputLabel"></label>
+            </div>
+  	      </div>
+  	    
+          <div class="finalGravity">
+            <h4 id="titleFG">Final Gravity</h4>
+            <div class="userInputsInputDiv" id="finalGravityValueDiv">  
+              <input type='number' class='gravity' id='finalGravityValue' name='FG' placeholder='Insert FG' />
+              <label for="finalGravityValue" id="finalGravityValueLabel" class="inputLabel"></label>
+            </div>
+          </div>
+
+          <div class="originalGravity">
+            <h4 id="titleOG">Original Gravity</h4>
+            <div class="userInputsInputDiv" id='outputOG'>
+              <input type="number" class="gravity" id="ogSG" name="ogSG" placeholder="OG Output" disabled  />
+              <label for="ogSG" id="ogSGLabel" class="inputLabel"></label>
+            </div>
+          </div>       
+  	    
+  	      <div class='ADFbox'>
+            <h4 id="titleADF">App. Deg. of Ferm.</h4>
+            <div class="userInputsInputDiv" id='outputADF'>
+              <input type="number" class="gravity" id="ADFval" name="ADFval" placeholder="ADF Output" disabled />
+              <label for="ADFval" id="ADFvalLabel" class="inputLabel"></label>
+            </div>
+	      </div>
+        </div>
+      
+        <hr id='userInputDivider'> 
+      
+        <div id="brewHouse"> 
+          <div id="brewHouseEfficiencyBox">
+  	        <h4 id="titleBHE">BrewHouse Efficiency</h4>
+  	        <span id="modalBHELink">?</span>
+  	        <div class='userInputsInputDiv' id='outputBHE'>
+  	          <input type='number' class='gravity' id='BHE' name='brewHouseEfficiency' placeholder='Insert BHE'  />
+  	          <label for='BHE' id='BHELabel' class='inputLabel'></label>
+  	        </div>
+          </div>   
+      
+          <div id="evapRateBox">
+  	        <h4 id="titleER">Evaporation Rate</h4>
+  	        <span id="modalERLink">?</span>
+  	        <div class='userInputsInputDiv' id='outputER'>
+  	          <input type='number' class='gravity' id="ER" name="evapRate" placeholder='Insert ER' />
+  	          <label for='ER' id='ERLabel' class='inputLabel'></label>
+  	        </div>
+          </div>
+        
+          <div id="waterGrainRatioBox">
+  	        <h4 id="titleWGR">Water to Grain Ratio</h4>
+              <div id="wgrDiv">  
+              <div class='twoTo1'>2 to 1</div>
+              <div class='threeTo1'>3 to 1</div>
+              <div class='fourTo1'>4 to 1</div>
+            </div>
+          </div>
+        
+          <div id="colorBox">
+            <h4 id="titleColor">Beer Color (SRM)</h4>
+            <div id="outputColor"><output id="colorVal">--</output></div>
+          </div>
+        
+          <div id="ibuBox">
+            <h4 id="titleIBU">IBU's</h4>
+            <div id="outputIBU"><output id="ibuVal">--</output></div>
+          </div>
+        </div>
+      </div>
+      <div id="userInputFooter"></div>
+    </div>
+  	
+  	<div id="rawMaterials">  
+  	  <div id="rawMaterialsHeader">
+  	    <h4 id="rawMaterialsTitle">Raw Material Additions</h4>
+  	  </div>
+      <div id="maltsAdjucntsDiv" class="rawMaterialsBody">
+        <h4 id="titleMalts"> Malt & Adjunct Additions</h4>
+        <div class ="malts" id="maltForm1">
+          <div id="maltLabel">
+            <p>Malt/Adjunct</p>
+            <select class="maltSelect" id="malt1Options" name="malt1"></select>
+          </div>
+          <div id="percentLabel">  
+            <p>Percent</p>
+            <input type="text" class="percentage" placeholder="%" name="percent1"/>
+          </div>
+          <div class="maltWeightLabel">
+            <p>Weight</p>
+            <output id="grainWeight1">--</output>
+          </div>
+        </div>
+      
+        <div class ="malts" id="maltForm2">
+          <select class="maltSelect" id="malt2Options" name="malt2"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent2"/>
+          <div class="maltWeight"><output id="grainWeight2">--</output></div>          
+        </div>
+        
+        <div class ="malts" id="maltForm3">
+          <select class="maltSelect" id="malt3Options" name="malt3"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent3"/>
+          <div class="maltWeight"><output id="grainWeight3">--</output></div>
+       </div>
+            
+        <div class ="malts" id="maltForm4">
+          <select class="maltSelect" id="malt4Options" name="malt4"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent4"/>
+          <div class="maltWeight"><output id="grainWeight4">--</output></div>
+        </div>
+            
+        <div class ="malts" id="maltForm5">
+          <select class="maltSelect" id="malt5Options" name="malt5"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent5"/>
+          <div class="maltWeight"><output id="grainWeight5">--</output></div>
+        </div>
+            
+        <div class ="malts" id="maltForm6">
+          <select class="maltSelect"  id="malt6Options" name="malt6"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent6"/>
+          <div class="maltWeight"><output id="grainWeight6">--</output></div>
+        </div>
+            
+        <div class ="malts" id="maltForm7">
+          <select class="maltSelect"  id="malt7Options" name="malt7"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent7"/>
+          <div class="maltWeight"><output id="grainWeight7">--</output></div>
+        </div>
+            
+        <div class ="malts" id="maltForm8">
+          <select class="maltSelect"  id="malt8Options" name="malt8"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent8"/>
+          <div class="maltWeight"><output id="grainWeight8">--</output></div>
+        </div>  
+          
+        <div class ="malts" id="maltForm9">
+          <select class="maltSelect" id="malt9Options" name="malt9"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent9"/>
+          <div class="maltWeight"><output id="grainWeight9">--</output></div>
+        </div>
+            
+        <div class ="malts" id="maltForm10">
+          <select class="maltSelect" id="malt10Options" name="malt10"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent10"/>
+          <div class="maltWeight"><output id="grainWeight10">--</output> </div>
+        </div>
+      
+        <div class ="malts" id="maltForm11">
+          <select class="maltSelect" id="malt11Options" name="malt11"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent11"/>
+          <div class="maltWeight"><output id="grainWeight11">--</output></div>
+        </div>
+            
+        <div class ="malts" id="maltForm12">
+          <select class="maltSelect" id="malt12Options" name="malt12"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent12"/>
+          <div class="maltWeight"><output id="grainWeight12">--</output></div>
+        </div>      
+      
+        <div class ="malts" id="maltForm13">
+          <select class="maltSelect" id="malt13Options" name="malt13"></select>
+          <input type="text" class="percentage" placeholder="%" name="percent13"/>
+          <div class="maltWeight"><output id="grainWeight13">--</output></div>
+        </div>
+            
+        <div class ="malts" id="maltForm14">
+          <select class="maltSelect" id="malt14Options" name="malt14"></select>                     
+          <input type="text" class="percentage" placeholder="%" name="percent14"/>
+          <div class="maltWeight"><output id="grainWeight14">--</output></div>
+        </div>
+        <div id="maltButtons">
+          <button id="maltAdd">Add</button>
+          <button id="maltRemove">Remove</button>
+          <button id='calcGrainBill'>Calculate Grain Bill</button>
+        </div>
+        <div class='grainBillTotal'>
+  	      Total Grain Weight: <output id='gBT'>--</output>  
+  	    </div>
+      </div>
+      
+      <div id="hopsDiv" class="rawMaterialsBody">
+        <h4 id="titleKettleHops"> Kettle Hop Additions</h4>
+        <p id="timeLabel">Time</p>
+        <p id="hopLabel">Hop Variety</p>
+        <p id="aaLabel">A. Acid</p>
+        <p id="ibuLabel">Desired IBU</p>
+        <p id="hopWeightLabel">Weight</p>
+        <div class="hops" id="hopForm1">
+          <input type="text" class="hopAdditionTime" name="hopOneTime" placeholder="Mins" />
+          <select class="hopSelect" id="hopOneSelect"name="hopOneSelect"></select>
+          <input type="text" class="alphaAcid" name="hopOneAA" placeholder="AA"/> 
+          <input type="text" class="desiredIBUs" name="hopOneIBU" placeholder="IBUs"/>
+          <output class="hopWeight" id="hopOneWeight">--</output>
+        </div>
+        <div id="hopButtons">
+          <button id="hopAdd">Add</button>
+          <button id="hopRemove">Remove</button>
+          <button id="calcHopBill">Calculate Hop Bill</button>
+        </div>
+        <h4 id="titleDryHops"> Dry Hop Additions</h4>
+      </div>
+    </div>
+    
+    <div id="rawMaterialsFooter2">
+    </div>
+  	
+  	<div id="mashLauter">
+  	  <div id="mashLauterHeader">
+  	    <h4 id="titleMash">Mash & Lauter</h4>
+  	  </div>
+  	  <div id="mashLauterBody">
+  	  
+  	      <div id="infusionMash" class="mashProfiles">
+  	          <p id="titleInfusionMash"> Infusion Mash </p>
+  	          <div id="infusionProfile">
+  	            
+  	            <div id='infusionMashInDiv'>
+  	              <p>Mash In Water</p>
+  	              <div id='infusionMashInBox'><output id='infusionMashInVol'>--</output></div>
+  	            </div>
+  	            
+  	            <div id="sachRestDiv">
+  	              <p>Sacchrification Rest Temp</p>
+  	              <p>Click Inside to Change</p>
+  	              <input type="text" id="infusionSachRestTemp" name="infusionSachRestTemp" placeholder="Temperature"/>
+  	            </div>
+  	            
+  	            <div id="infusionStrikeWaterDiv">
+  	              <p>Strike Water Temperature</p>
+  	              <div id="infusionStrikeWaterBox"><output id="infusionStrikeWaterVal">--</output></div>
+  	            </div>
+  	            
+  	            <div id="mashOutDiv">
+  	              <p>Mash Out?</p>
+  	              <div id="mashOutYes"><p>Yes</p></div>
+  	              <div id="mashOutNo"><p>No</p></div> </br>
+  	              <input type="text" id="mashOutValue" placeholder="Temperature"/>
+  	            </div>
+  	          </div>
+  	      </div>
+  	        
+  	      <div id="stepMash" class="mashProfiles">
+  	          <p id="titleStepMash"> Step Mash </p>
+  	          <div id="stepProfile">
+  	            <div id='stepOptions'>
+  	              <span id="stepMashClose">&times;</span>
+  	              <p id="stepProfileTitle"> Select Your Mash Steps </p>
+  	              <div id='stepMashButton'><button>Click Here After Choosing Steps</button></div>
+  	            <!--
+  	              <div id='stepRaises'>
+  	                <span id='stepRaisesTitle'>Temperature Increases are Raised with?: </span>
+  	                <div id='stepRaisesSteam'>Steam</div>
+  	                <div id='stepRaisesWater'>Water</div>
+  	              </div>
+  	            -->
+  	              <div id="stepDoughIn">
+  	                <div id="stepDoughInDiv"> 
+  	                  <p id="stepDoughInTitle">Dough In Rest</p>
+  	                  <p id="stepDoughInTemp"></p> 
+  	                </div>
+  	                <div class="stepInputs">
+  	                  <div class="stepTempsDiv" id="stepDoughInSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="stepDoughInSetpoint" class="stepTemps" name="stepDoughInSetpoint"/>
+  	                    <label for="stepDoughInSetpoint" id="stepDoughInSetpointLabel" class="inputLabel"></label>
+  	                  </div>  
+  	                  <div class="stepTimesDiv" id="stepDoughInTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="stepDoughInTime" class="stepTimes" name="stepDoughInTime" />
+  	                    <label for="stepDoughInTime" id="stepDoughInTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	            
+  	              <div id="stepBetaGluc">  
+  	                <div id="stepBetaGlucDiv"> 
+  	                  <p id="stepBetaGlucTitle">Beta-Glucanase Rest</p> 
+  	                  <p id="stepBetaGlucTemp"></p> 
+  	                </div>
+  	                <div class="stepInputs">
+  	                  <div class="stepTempsDiv" id="stepBetaGlucSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="stepBetaGlucSetpoint" class="stepTemps" name="stepBetaGlucSetpoint" />
+  	                    <label for="stepBetaGlucSetpoint" id="stepBetaGlucSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="stepTimesDiv" id="stepBetaGlucTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="stepBetaGlucTime" class="stepTimes" name="stepBetaGlucTime" />
+  	                    <label for="stepBetaGlucTime" id="stepBetaGlucTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	            
+  	              <div id="stepProtein">  
+  	                <div id="stepProteinDiv"> 
+  	                  <p id="stepProteinTitle">Protein Rest</p> 
+  	                  <p id="stepProteinTemp"></p> 
+  	                </div> 
+  	                <div class="stepInputs">
+  	                  <div class="stepTempsDiv" id="stepProteinSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="stepProteinSetpoint" class="stepTemps" name="stepProteinSetpoint" />
+  	                    <label for="stepProteinSetpoint" id="stepProteinSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="stepTimesDiv" id="stepBetaGlucTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="stepProteinTime" class="stepTimes" name="stepProteinTime" />
+  	                    <label for="stepProteinTime" id="stepProteinTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	            
+  	              <div id="stepBetaAmy">
+  	                <div id="stepBetaAmyDiv"> 
+  	                  <p id="stepBetaAmyTitle">Beta Amylase Rest</p> 
+  	                  <p id="stepBetaAmyTemp"></p> 
+  	                </div>
+  	                <div class="stepInputs">
+  	                  <div class="stepTempsDiv" id="stepBetaAmySetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="stepBetaAmySetpoint" class="stepTemps" name="stepBetaAmySetpoint"/>
+  	                    <label for="stepBetaAmySetpoint" id="stepBetaAmySetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="stepTimesDiv" id="stepBetaGlucTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="stepBetaAmyTime" class="stepTimes" name="stepBetaAmyTime" />
+  	                    <label for="stepBetaAmyTime" id="stepBetaAmyTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	            
+  	              <div id="stepSach">  
+  	                <div id="stepSachDiv"> 
+  	                  <p id="stepSachTitle">Saccharification Rest</p> 
+  	                  <p id="stepSachTemp"></p> 
+  	                </div> 
+  	                <div class="stepInputs">
+  	                  <div class="stepTempsDiv" id="stepSachSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="stepSachSetpoint" class="stepTemps" name="stepSachSetpoint"/>
+  	                    <label for="stepSachSetpoint" id="stepSachSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="stepTimesDiv" id="stepSachTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="stepSachTime" class="stepTimes" name="stepSachTime" />
+  	                    <label for="stepSachTime" id="stepSachTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	            
+  	              <div id="stepMashOut">
+  	                <div id="stepMashOutDiv"> 
+  	                  <p id="stepMashOutTitle">Mash Out</p> 
+  	                  <p id="stepMashOutTemp"></p> 
+  	                </div>
+  	                <div class="stepInputs">
+  	                  <div class="stepTempsDiv" id="stepMashOutSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="stepMashOutSetpoint" class="stepTemps" name="stepMashOutSetpoint" />
+  	                    <label for="stepMashOutSetpoint" id="stepMashOutSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="stepTimesDiv" id="stepMashOutTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="stepMashOutTime" class="stepTimes" name="stepSachTime" />
+  	                    <label for="stepMashOutTime" id="stepMashOutTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	            </div>
+  	            
+  	            <hr id='stepDividerOne'>
+  	            
+  	            <div id='stepMashIn'>
+  	              <div id='stepStrikeTemp'>  
+  	                <p class='stepMashInTitle'>Strike Water Temperature</p>
+  	                <div class='mashInOutputDiv'>
+  	                  <input type='number' placeholder='Temperature' id='stepStrikeTempValue' name='stepStrikeTempValue' class='mashInOutput' disabled/>
+  	                  <label for='stepStrikeTempValue' id='stepStrikeTempValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	              <div id ='stepMashInVol'>
+  	                <p class='mashInTitle'>Mash In Water</p>
+  	                <div class='mashInOutputDiv'>
+  	                  <input type='number' placeholder='Volume' id='stepMashInVolValue' name='stepMashInVolValue' class='mashInOutput' disabled/>
+  	                  <label for='stepMashInVolValue' id='stepMashInVolValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	            </div>
+  	            
+  	            <!--
+  	            <hr id='stepDividerTwo'>
+  	            
+  	            <div id='stepRaiseVolumes'>
+  	              <h4 id='stepRaiseVolumesTitle'>
+  	                Water Additions to Achieve Mash Step Raises </br>
+  	                <h6 id='stepRaiseVolumesSubtitle'>Volume calculations assume the water is boiling</h6>
+  	              </h4>
+  	              <div id='stepFromDoughIn'>
+  	                <p class='stepWaterTitle'>Step from Dough In</p>
+  	                <div id='stepFromDoughInOutput' class='stepWaterOutputs'><output id='stepFromDoughInValue'> Volume </output></div>
+  	              </div>
+  	              
+  	              
+  	              <div id='stepFromBetaGluc'>
+  	                <p class='stepWaterTitle'>Step from Beta Glucanase</p>
+  	                <div id='stepFromBetaGlucOutput' class='stepWaterOutputs'><output id='stepFromBetaGlucValue'> Volume </output></div>
+  	              </div>
+  	              
+  	              <div id='stepFromProtein'>
+  	                <p class='stepWaterTitle'>Step from Protein</p>
+  	                <div id='stepFromProteinOutput' class='stepWaterOutputs'><output id='stepFromProteinValue'> Volume </output></div>
+  	              </div>
+  	              
+  	              <div id='stepFromBetaAmy'>
+  	                <p class='stepWaterTitle'> Step from Beta Amylase</p>
+  	                <div id='stepFromBetaAmyOutput' class='stepWaterOutputs'><output id='stepFromBetaAmyValue'> Volume </output></div>
+  	              </div>
+  	              
+  	              <div id='stepFromStepSach'>
+  	                <p class='stepWaterTitle'>Step from Saccharification</p>
+  	                <div id='stepFromStepSachOutput' class='stepWaterOutputs'><output id='stepFromStepSachValue'> Volume </output></div> 
+  	              </div>
+  	              -->
+  	            </div>
+  	          </div>
+  	      </div>
+  	        
+  	      <div id="decoctionMash" class="mashProfiles">
+  	          <p id="titleDecoctionMash"> Decoction Mash </p>
+  	          <div id="decoctionProfile">
+  	            <div id='decoctionOptions'>
+  	              <span id="decoctionMashClose">&times;</span>
+  	              <p id="decoctionProfileTitle"> Select Your Mash Steps </p>
+  	              <div id='decoctionMashButton'><button>Click Here After Choosing Steps</button></div>
+  	              
+  	              <div id="decoctionDoughIn">
+  	                <div id="decoctionDoughInDiv"> 
+  	                  <p id="decoctionDoughInTitle">Dough In Rest</p>
+  	                  <p id="decoctionDoughInTemp"></p> 
+  	                </div>
+  	                <div class="decoctionInputs">  
+  	                  <div class="decoctionStepTempsDiv" id="decoctionDoughInSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="decoctionDoughInSetpoint" class="decoctionStepTemps" name="decoctionDoughInSetpoint" />
+  	                    <label for="decoctionDoughInSetpoint" id="decoctionDoughInSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="decoctionStepTimesDiv" id="decoctionDoughInTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="decoctionDoughInTime" class="decoctionStepTimes" name="decoctionDoughInTime" />
+  	                    <label for="decoctionDoughInTime" id="decoctionDoughInTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id="decoctionBetaGluc">  
+  	                <div id="decoctionBetaGlucDiv"> 
+  	                  <p id="decoctionBetaGlucTitle">Beta-Glucanase Rest</p> 
+  	                  <p id="decoctionBetaGlucTemp"></p> 
+  	                </div>
+  	                <div class="decoctionInputs">
+  	                  <div class="decoctionStepTempsDiv" id="decoctionBetaGlucSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="decoctionBetaGlucSetpoint" class="decoctionStepTemps" name="decoctionBetaGlucSetpoint" />
+  	                    <label for="decoctionBetaGlucSetpoint" id="decoctionBetaGlucSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="decoctionStepTimesDiv" id="decoctionBetaGlucTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="decoctionBetaGlucTime" class="decoctionStepTimes" name="decoctionBetaGlucTime" />
+  	                    <label for="decoctionBetaGlucTime" id="decoctionBetaGlucTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id="decoctionProtein">  
+  	                <div id="decoctionProteinDiv"> 
+  	                  <p id="decoctionProteinTitle">Protein Rest</p> 
+  	                  <p id="decoctionProteinTemp"></p> 
+  	                </div> 
+  	                <div class="decoctionInputs">  
+  	                  <div class="decoctionStepTempsDiv" id="decoctionProteinSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="decoctionProteinSetpoint" class="decoctionStepTemps" name="decoctionProteinSetpoint" />
+  	                    <label for="decoctionProteinSetpoint" id="decoctionProteinSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="decoctionStepTimesDiv" id="decoctionProteinTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="decoctionProteinTime" class="decoctionStepTimes" name="decoctionProteinTime" />
+  	                    <label for="decoctionProteinTime" id="decoctionProteinTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id="decoctionBetaAmy">
+  	                <div id="decoctionBetaAmyDiv"> 
+  	                  <p id="decoctionBetaAmyTitle">Beta Amylase Rest</p> 
+  	                  <p id="decoctionBetaAmyTemp"></p> 
+  	                </div>
+  	                <div class="decoctionInputs">  
+  	                  <div class="decoctionStepTempsDiv" id="decoctionBetaAmySetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="decoctionBetaAmySetpoint" class="decoctionStepTemps" name="decoctionBetaAmySetpoint"/>
+  	                    <label for="decoctionBetaAmySetpoint" id="decoctionBetaAmySetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="decoctionStepTimesDiv" id="decoctionBetaAmyTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="decoctionBetaAmyTime" class="decoctionStepTimes" name="decoctionBetaAmyTime" />
+  	                    <label for="decoctionBetaAmyTime" id="decoctionBetaAmyTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id="decoctionSach">  
+  	                <div id="decoctionSachDiv"> 
+  	                  <p id="decoctionSachTitle">Saccharification Rest</p> 
+  	                  <p id="decoctionSachTemp"></p> 
+  	                </div> 
+  	                <div class="decoctionInputs">
+  	                  <div class="decoctionStepTempsDiv" id="decoctionSachSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="decoctionSachSetpoint" class="decoctionStepTemps" name="decoctionSachSetpoint"/>
+  	                    <label for="decoctionSachSetpoint" id="decoctionSachSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="decoctionStepTimesDiv" id="decoctionSachTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="decoctionSachTime" class="decoctionStepTimes" name="decoctionSachTime" />
+  	                    <label for="decoctionSachTime" id="decoctionSachTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id="decoctionMashOut">
+  	                <div id="decoctionMashOutDiv"> 
+  	                  <p id="decoctionMashOutTitle">Mash Out</p> 
+  	                  <p id="decoctionMashOutTemp"></p> 
+  	                </div>
+  	                <div class="decoctionInputs">  
+  	                  <div class="decoctionStepTempsDiv" id="decoctionMashOutSetpointDiv">
+  	                    <input type="number" placeholder="Temp" id="decoctionMashOutSetpoint" class="decoctionStepTemps" name="decoctionMashOutSetpoint" />
+  	                    <label for="decoctionMashOutSetpoint" id="decoctionMashOutSetpointLabel" class="inputLabel"></label>
+  	                  </div>
+  	                  <div class="decoctionStepTimesDiv" id="decoctionMashOutTimeDiv">
+  	                    <input type="number" placeholder="Time (min)" id="decoctionMashOutTime" class="decoctionStepTimes" name="decoctionMashOutTime" />
+  	                    <label for="decoctionMashOutTime" id="decoctionMashOutTimeLabel" class="inputLabel"></label>
+  	                  </div>
+  	                </div>
+  	              </div>
+  	            </div>
+  	            
+  	            <hr id='decoctionDividerOne'>
+  	            
+  	            <div id='decoctionMashIn'>
+  	              <div id='decoctionStrikeTemp'>  
+  	                <p class='mashInTitle'>Strike Water Temperature</p>
+  	                <div class='mashInOutputDiv'>
+  	                  <input type='number' placeholder='Temperature' id='decoctionStrikeTempValue' name='decoctionStrikeTempValue' class='mashInOutput' disabled/>
+  	                  <label for='decoctionStrikeTempValue' id='decoctionStrikeTempValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	              <div id ='decoctionMashInVol'>
+  	                <p class='mashInTitle'>Mash In Water</p>
+  	                <div class='mashInOutputDiv'>
+  	                  <input type='number' placeholder='Volume' id='decoctionMashInVolValue' name='decoctionMashInVolValue' class='mashInOutput' disabled/>
+  	                  <label for='decoctionMashInVolValue' id='decoctionMashInVolValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	            </div>
+  	            
+  	            <hr id='decoctionDividerTwo'>
+  	            
+  	            <div id='decoctionRaiseVolumes'>
+  	              <h4 id='decoctionRaiseVolumesTitle'>Mash Volumes to Remove and Boil to Achieve Desired Step Raises</h4>
+  	              
+  	              <div id='decoctionStepFromDoughIn'>
+  	                <p class='stepWaterTitle'>Step from Dough In</p>
+  	                <div id='decoctionStepFromDoughInOutput' class='decoctionStepWaterOutputsDiv'>
+  	                  <input type='number' placeholder='Volume' id='decoctionStepFromDoughInValue' class='decoctionStepWaterOutputs' name='decoctionStepFromDoughInValue' disabled />
+  	                  <label for='decoctionStepFromDoughInValue' id='decoctionStepFromDoughInValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id='decoctionStepFromBetaGluc'>
+  	                <p class='stepWaterTitle'>Step from Beta Glucanase</p>
+  	                <div id='decoctionStepFromBetaGlucOutput' class='decoctionStepWaterOutputsDiv'>
+  	                  <input type='number' placeholder='Volume' id='decoctionStepFromBetaGlucValue' class='decoctionStepWaterOutputs' name='decoctionStepFromBetaGlucValue' disabled />
+  	                  <label for='decoctionStepFromBetaGlucValue' id='decoctionStepFromBetaGlucValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id='decoctionStepFromProtein'>
+  	                <p class='stepWaterTitle'>Step from Protein</p>
+  	                <div id='decoctionStepFromProteinOutput' class='decoctionStepWaterOutputsDiv'>
+  	                  <input type='number' placeholder='Volume' id='decoctionStepFromProteinValue' class='decoctionStepWaterOutputs' name='decoctionStepFromProteinValue' disabled />
+  	                  <label for='decoctionStepFromProteinValue' id='decoctionStepFromProteinValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id='decoctionStepFromBetaAmy'>
+  	                <p class='stepWaterTitle'> Step from Beta Amylase</p>
+  	                <div id='decoctionStepFromBetaAmyOutput' class='decoctionStepWaterOutputsDiv'>
+  	                  <input type='number' placeholder='Volume' id='decoctionStepFromBetaAmyValue' class='decoctionStepWaterOutputs' name='decoctionStepFromBetaAmyValue' disabled />
+  	                  <label for='decoctionStepFromBetaAmyValue' id='decoctionStepFromBetaAmyValueLabel' class='inputLabel'></label>
+  	                </div>
+  	              </div>
+  	              
+  	              <div id='decoctionStepFromStepSach'>
+  	                <p class='stepWaterTitle'>Step from Saccharification</p>
+  	                <div id='decoctionStepFromStepSachOutput' class='decoctionStepWaterOutputsDiv'>
+  	                  <input type='number' placeholder='Volume' id='decoctionStepFromStepSachValue' class='decoctionStepWaterOutputs' name='decoctionStepFromStepSachValue' disabled />
+  	                  <label for='decoctionStepFromStepSachValue' id='decoctionStepFromStepSachValueLabel' class='inputLabel'></label>
+  	                </div> 
+  	              </div>
+  	            </div>
+  	          </div>
+  	      </div>
+  	  
+  	      <div id="mashLauterDivider"> </div>
+  	      
+  	      <p class="spargeWater">Sparge Water: <output id="sH20"> </output></p>
+  	      <p class="totalWater">Total Water Needed: <output id="tH20"> </output></p>
+  	      
+  	  </div>
+  	  <div id="mashLauterFooter"></div>
+  	</div>
+  	
+  	<div id="boilWhirlpool">
+  	  <div id="boilWhirlpoolHeader">
+  	    <h4 id="titleBoil">Boil & Whirlpool & Knockout</h4>
+  	  </div>
+  	  <div id="boilWhirlpoolBody">
+  	    <p class='kettleFullVol'>Kettle Full Vol: <output id='kFV'> </output> </p>
+  	    <p class='kettleFullGrav'>Kettle Full Gravity: <output id='kFG'> </output></p>
+  	    <p class='kettleKOVol'>Kettle KO Vol: <output id='kKOV'> </output></p>
+  	    <p class='kettleKOGrav'>Kettle KO Gravity: <output id='kKOG'> </output></p>
+  	  </div>
+      <div id="boilWhirlpoolFooter"></div>
+    </div>
+  	
+  	<div id="fermentation">
+  	  <h4 id="titleFermentation"> Fermentation Paramaters </h4>
+  	</div>
+	
+<div id="modalER" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Calculate Your Evaporation Rate</h2>
+    </div>
+    <div class="modal-body">
+      <p>Starting Boil Volume</p>
+      <input type="text" id="startVol" class="modalERVolumes" placeholder="Boil Vol. Start" name="startVol"/>
+      <p>Final Boil Volume</p>
+  	  <input type="text" id="finalVol" class="modalERVolumes" placeholder="Boil Vol. Final" name="finalVol"/>
+  	  <p>Evaporation Rate Percentage</p>
+  	  <output id="modalEROutput">--</output>
+    </div>
+    <div class="modal-footer">
+    </div>
+  </div>
+
+</div>
+
+<div id="modalBHE" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Calculating Your Brewhouse Efficiency</h2>
+    </div>
+    <div class="modal-body">
+      <p style="text-align: left">There are a number of references that specify what Brewhouse Efficiency is and how to calculate it. At Fuge,
+      our definition and calculation of Brewhouse efficiency may be different than some references. Brewhouse Efficiency is how efficient your 
+      brewhouse is at extracting sugar from the grain. To do that, you can make adjustments to the mill, the mash, or the lauter. Once you have  
+      collected the total volume in the kettle your gravity will tell you how efficient your  processes are. When brewing a recipe more than  
+      once you can track your efficiencies over time, but when you are creating a new recipe there is no prior information to tell you what your 
+      Brewhouse Efficiency is. The best way to determine a Brewhouse Efficiency for a new recipe, take a known brewhouse efficiency from a recipe 
+      with a similar grain bill. If there is not another recipe to use as a reference the please use this guide:</p>
+      <h4 style="text-align: center">Calculate from Another Recipe</h4>
+      <h6 style="text-align: center">Please Select Units Before Proceeding</h6>
+      <div>
+        <p>Base Malt Used</p>
+        <select class="maltSelect" id="modalMaltOptions" class="modalBHE" name="modalMalt"></select>
+      </div>
+      <div>
+        <p>Kettle Full Volume</p>
+        <input type="text" placeholder="Volume" class="modalBHE" id="modalFKV" name="modalFKV"/>
+      </div>
+      <div>
+        <p>Kettle Full Gravity</p>
+        <input type="text" placeholder="Gravity" class="modalBHE" id="modalFKG" name="modalFKG"/>
+      </div>
+      <div>
+        <p>Base Malt Used</p>
+        <input type="text" placeholder="Pounds" class="modalBHE" id="modalBaseMaltUsed" name="modalBaseMaltUsed" />
+      </div>
+      <div>
+        <p>Base Malt Percentage</p>
+        <input type="text" placeholder="%" class="modalBHE" id="modalBaseMaltPercent" name="modalBaseMaltPercent"/>
+      </div>
+      <div id="modalBHEOutputDiv">
+        <p>Brewhouse Efficiency<p>
+        <output id="modalBHEOutput">--</output>
+      </div>
+    </div>
+    <div class="modal-footer">
+    </div>
+  </div>
+
+
+</div>
+	
+  </body>
+</html>

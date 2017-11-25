@@ -1,0 +1,1322 @@
+* {
+  font-family: 'Palanquin', sans-serif;
+}
+
+body {
+    background-image: url(background.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor:default;
+}
+
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: none;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+#titleName {
+  display: block;
+  width: 50em;
+  height: 3.25em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: .5em;
+  /*background-color:rgb(92, 184, 92);
+  background-color: rgba(92, 184, 92, 0.95);*/
+  box-shadow: 0 1px 1px 0 #888;
+}
+
+  #beerName {
+    width: 33em;
+    vertical-align: center;
+    text-align: center;
+    margin: .1em 0em 0em .1em;
+    font-size: 1.5em;
+    background-color: rgb(245,245,245);
+    background-color: rgba(245,245,245, 0.9);
+  }
+
+
+
+
+#unitBox {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+  height: 4.5em;
+  box-shadow: 0 1px 1px 0 #888
+}
+
+  #unitBoxHeader {
+    margin: 0em;
+    padding: 0em;
+    width: 50em;
+    height: 1.8em;
+    background-color:rgb(92, 184, 92);
+    background-color: rgba(92, 184, 92, 0.95);
+  }
+
+    #titleUnits {
+      text-align: center;
+      margin-top: -.2em;
+    }
+
+  #unitBoxBody{
+    margin: 0em;
+    padding: 0em;
+    width: 50em;
+    height: 2.4em;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+    .unitBoxVolume  {
+      display: inline-block;
+      margin-right:.1em;
+      margin-left: .15em;
+      margin-top: .15em;
+      float: left;
+      width:24.5%;
+    }
+
+    .unitBoxGravity {
+      display: inline-block;
+      margin-right:.1em;
+      margin-top: .15em;
+      float: left;
+      width:24.5%;
+    }
+
+    .unitBoxWeight {
+      display: inline-block;
+      margin-top: .15em;
+      margin-right: .1em;
+      float: left;
+      width:24.5%;
+    }
+    
+    .unitBoxTemp {
+      display: inline-block;
+      margin-top: .15em;
+      margin-right: .15em;
+      float: right;
+      width:24.5%;
+    }
+
+    .BBL, .gal, .liters {
+      background-color: whitesmoke;
+      width: 4.1em;
+      height: 2em;
+      font-size: .9em;
+      display:inline-block;
+      border: solid #555 1px;
+      text-align:center;
+      border-radius: 3px;
+      position: relative;
+    }
+    
+    .plato  {
+      background-color: whitesmoke;
+      width: 4.2em;
+      height: 2em;
+      font-size: .9em;
+      display:inline-block;
+      border: solid #555 1px;
+      text-align:center;
+      border-radius: 3px;
+      position: relative;
+      margin-left: 4.6em;
+    }
+    
+    .specGrav {
+      background-color: whitesmoke;
+      width: 4.2em;
+      height: 2em;
+      font-size: .9em;
+      display:inline-block;
+      border: solid #555 1px;
+      text-align:center;
+      border-radius: 3px;
+      position: relative;
+    }
+    
+    .pounds {
+      background-color: whitesmoke;
+      width: 4.3em;
+      height: 2em;
+      font-size: .9em;
+      display:inline-block;
+      border: solid #555 1px;
+      text-align:center;
+      border-radius: 3px;
+      position: relative;
+      margin-left: 4.4em;
+    }
+    
+    .kilograms {
+      background-color: whitesmoke;
+      width: 4.3em;
+      height: 2em;
+      font-size: .9em;
+      display:inline-block;
+      border: solid #555 1px;
+      text-align:center;
+      border-radius: 3px;
+      position: relative;
+    }
+    
+    .fahrenheit {
+      background-color: whitesmoke;
+      width: 4.2em;
+      height: 2em;
+      font-size: .9em;
+      display:inline-block;
+      border: solid #555 1px;
+      text-align:center;
+      border-radius: 3px;
+      position: relative;
+      margin-left: 4.6em;
+    }
+    
+    .celsius {
+      background-color: whitesmoke;
+      width: 4.2em;
+      height: 2em;
+      font-size: .9em;
+      display:inline-block;
+      border: solid #555 1px;
+      text-align:center;
+      border-radius: 3px;
+      position: relative;
+    }
+    
+    .BBL.active, .gal.active, .liters.active, .plato.active, .specGrav.active, .pounds.active, .kilograms.active, .fahrenheit.active, .celsius.active {
+      width: 10em;
+    }
+
+    .BBL:hover, .gal:hover, .liters:hover, .pounds:hover, .kilograms:hover, .plato:hover, .specGrav:hover, .fahrenheit:hover, .celsius:hover {
+      cursor: pointer;
+    }
+
+  #unitBoxFooter{
+    margin: 0em;
+    padding: 0em;
+    width: 50em;
+    height: .3em;
+    background-color: rgb(239, 187, 0);
+    background-color: rgba(239, 187, 0, 0.95); 
+  }
+
+
+
+
+
+
+#userInput {
+  margin: 1em auto 1em auto;
+  width: 50em;
+  box-shadow: 0 1px 1px 0 #888;
+}
+
+  #userInputHeader {
+    margin: 0em;
+    padding: 0em;
+    width: 50em;
+    height: 1.8em;
+    background-color:rgb(92, 184, 92);
+    background-color: rgba(92, 184, 92, 0.95);
+  }
+
+    #titleUserInput {
+      text-align: center;
+      margin: auto;
+    }
+
+  #gravities {
+    display: block;
+    height: 4em;
+    vertical-align: top;
+    width: 50em;
+  }
+
+
+
+
+
+  .userInputBody {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+    
+    .userInputsInputDiv {
+      position: relative;
+      margin-left: 0;
+      display: inline-block;
+    }
+    
+    #volumeValueLabel, #ABVLabel, #finalGravityValueLabel, #ogSGLabel, #ADFvalLabel, #BHELabel, #ERLabel {
+      line-height: 2.3em; 
+      position: absolute; 
+      bottom: 0;
+      font-size: .9em;
+      color: black;
+    }
+    
+    .gravity {
+      color: transparent;
+      font-size: .9em; 
+      height: 2.5em; 
+      border-radius: 3px;
+      -moz-transition: 0.3s all ease;
+      -ms-transition: 0.3s all ease;
+      -o-transition: 0.3s all ease;
+      -webkit-transition: 0.3s all ease;
+      transition: 0.3s all ease;
+      border: 1px solid #555; 
+      padding: 0 .625em; 
+      margin: 0em auto;
+      width: 7em; 
+      position: relative;
+	  z-index: 2;
+      color: rgba(0,0,0,1);
+      margin-top: -1em;
+      box-sizing: border-box;
+    }
+    
+    .gravity::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    }
+    
+    .gravity:focus::-webkit-input-placeholder { color:transparent; }
+    .gravity:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+    .gravity:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+    .gravity:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+    
+    .gravity + .inputLabel {
+      right:  0.625em;
+    }
+    
+    .gravity.active {
+      background-color: rgba(255,255,255,.6);
+      padding: 0 1.25em;
+    }
+    
+    .gravity:focus {
+      outline: none;
+      border-color: #0593ff;
+    }
+    
+    #volume, .originalGravity, .finalGravity, .ABVbox, .ADFbox, #evapRateBox, #brewHouseEfficiencyBox {
+      text-align: center;
+      vertical-align: top;
+      display: inline-block;
+      width: 9.87em;
+      height: 4em;
+      float: left;
+    } 
+
+
+    #titleVolume, #titleOG, #titleFG, #titleABV, #titleADF {
+      text-align: center;
+      margin: -.2em auto 0.3em auto;
+    }
+
+  #userInputDivider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+
+
+  #brewHouse {
+    display: block;
+    height: 4em;
+    vertical-align: top;
+    width: 50em;
+  }
+
+        #titleBHE, #titleWGR, #titleER, #titleColor, #titleIBU {
+          text-align: center;
+          margin: -.2em auto 0.3em auto;
+          /*background-color: rgb(79, 175, 255);
+          background-color: rgba(79, 175, 255, 0.95);*/
+          font-size: .95em;
+        }
+
+      #modalERLink, #modalBHELink {
+        float:right;
+        display: inline-block;
+        margin: .9em .8em 0em -2em;
+        font-size: .9em;
+      }
+
+      #modalERLink:hover, #modalBHELink:hover  {
+        cursor: pointer;
+        color: #0593ff;
+        text-decoration: none;
+      }
+      /* Rest of generic Modal CSS at bottom of the page */
+
+        #modalEROutput, #modalBHEOutput {
+          display: block;
+          width: 6em;
+          height: 2em;
+          margin: -.1em auto .5em auto;
+          font-size: .9em;
+          background-color: whitesmoke;
+          border: solid #555 1px;
+          text-align: center;
+        }
+
+      #startVol, #finalVol, #modalFKV, #modalFKG, #modalBaseMaltUsed, #modalBaseMaltPercent {
+        display: block;
+        width: 6em;
+        height: 2em;
+        margin: -.1em auto .5em auto;
+        font-size: .9em;
+        background-color: whitesmoke;
+        border: solid #555 1px;
+        text-align: center;
+        border-radius: 3px;
+      }
+
+      #BHE:focus, #ER:focus, .gravity:focus, .percentage:focus, .maltSelect:focus, .hopSelect:focus {
+        outline: none;
+        border-color: #0593ff;
+      }
+
+    #waterGrainRatioBox { 
+      display: inline-block;
+      vertical-align: top;
+      width: 9.87em;
+      height: 4em;
+      float: left;
+    }
+      
+      #wgrDiv {
+        width: 10em;
+        height: 2.5em;
+      }
+      
+        .twoTo1, .threeTo1, .fourTo1 {
+          background-color: whitesmoke;
+          width: 3em;
+          height: 2em;
+          font-size: .9em;
+          color: black;
+          border: solid #555 1px;
+          display: inline-block;
+          text-align: center;
+          margin: -.4em 0em .5em .4em;
+          float: left;
+          border-radius: 3px;
+          position: relative;
+        }
+        
+        .twoTo1.active, .threeTo1.active, .fourTo1.active {
+          width: 5em;
+        }
+
+        .twoTo1:hover, .threeTo1:hover, .fourTo1:hover {
+          cursor: pointer;
+        }
+
+    #colorBox {
+      display: inline-block;
+      vertical-align: top;
+      width: 9.87em;
+      height: 4em;
+      float: left;
+    }
+      
+      #outputColor, #outputIBU {
+        margin: -.4em auto 0em auto;
+        width: 6em;
+        height: 2em;
+        border: solid #555 1px;
+        text-align:center;
+        font-size: .9em;
+        background-color: whitesmoke;
+        border-radius: 3px;
+      }
+    
+    #ibuBox {
+      display: inline-block;
+      vertical-align: top;
+      width: 9.87em;
+      height: 4em;
+      float: left;
+    }
+
+  #userInputFooter {
+    margin: 0em;
+    padding: 0em;
+    width: 50em;
+    height: .3em;
+    background-color: rgb(239, 187, 0);
+    background-color: rgba(239, 187, 0, 0.95); 
+  }
+
+
+
+
+
+
+
+
+
+#rawMaterials {
+  margin: 0em auto .1em auto;
+  width: 50em;
+  overflow: hidden;
+  box-shadow: 0 1px 1px 0 #888;
+}
+
+  #rawMaterialsHeader {
+    margin: -1.3em 0em 0em 0em;
+    padding: 0em;
+    width: 50em;
+    height: 1.8em;
+    background-color:rgb(92, 184, 92);
+    background-color: rgba(92, 184, 92, 0.95);
+  }
+  
+    #rawMaterialsTitle {
+      text-align:center;
+    }
+
+  .rawMaterialsBody {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+  }
+
+    #maltsAdjucntsDiv{
+      vertical-align: top;
+      float: left;
+      width: 49.9%;
+      border-right: solid #888 1px;
+    }
+    
+    #hopsDiv {
+      vertical-align: top;
+      float: right;
+      width: 49.95%;
+    }
+    
+    #maltLabel {
+      display: inline-block;
+      margin: -.2em 0em .08em 0em;
+      font-size: 1em;
+      text-align: center;
+    }
+    
+    #maltLabel p, #percentLabel p, .maltWeightLabel p {
+      margin: 0em 0em .3em 0em;
+    }
+    
+    #percentLabel {
+      display: inline-block;
+      margin: -.2em 0em .08em 0em;
+      font-size: 1em;
+      text-align: center;
+    }
+    
+    .maltWeightLabel {
+      display: inline-block;
+      margin: -.2em 0em .08em 0em;
+      font-size: 1.02em;
+      text-align: center;
+    }
+
+      .malts, .hops {
+        display: block;
+        margin: 1px;
+        font-size: .9em;
+      }
+      
+      .maltSelect, .hopSelect {
+        border: solid #555 1px;
+        font-size: .9em;
+        border-radius: 3px;
+        margin: 0em .5em 0em .2em;
+      }
+
+      .percentage {
+        border: solid #555 1px;
+        text-align: center;
+        font-size: .9em;
+        height: 2em;
+        width: 4.4em;
+        display: inline-block;
+        border-radius: 3px;
+        vertical-align: center;
+        background-color: whitesmoke;
+        margin: 0em .5em 0em 0em;
+        padding: 0em;
+      }
+
+      .hopWeight, .maltWeight, #grainWeight1 {
+        display: inline-block;
+        width: 4em;
+        height: 2.0em;
+        margin: 0em;
+        padding: 0em;
+        border: solid #555 1px;
+        text-align:center;
+        font-size: .9em;
+        background-color: whitesmoke;
+        border-radius: 3px;
+      }
+
+      #titleMalts, #titleKettleHops {
+        margin: -.1em auto 0.1em auto;
+        text-align: center;
+      }
+
+      .grainBillTotal {
+        display: inline-block;
+        margin-left: 2em;
+        font-size: .9em;
+      }
+
+      #maltButtons {
+      display: inline-block;
+      }  
+      
+        #maltAdd, #maltRemove, #calcGrainBill {
+          display: inline-block;
+          margin: .1em 0em .4em .4em;
+        }
+      
+      
+    #timeLabel {
+      display: inline-block;
+      margin: -.4em 0em -.5em 1.2em;
+      font-size: .9em;
+    }
+    
+    #hopLabel {
+      display: inline-block;
+      margin: -.4em 0em -.5em 3.6em;
+      font-size: .9em;
+    }
+    
+    #aaLabel {
+      display: inline-block;
+      margin: -.4em 0em -.5em 3.2em;
+      font-size: .9em;
+    }
+    
+    #ibuLabel {
+      display: inline-block;
+      margin: -1em 0em -.5em .4em;
+      font-size: .9em;
+    }
+        
+    #hopWeightLabel {
+      display: inline-block;
+      margin: -.4em 0em -.5em .25em;
+      font-size: .9em;
+      padding: 0em;
+    }
+    
+    .hopAdditionTime, .alphaAcid, .desiredIBUs {
+      margin:  0em 0em 0em .5em;
+      border: solid #555 1px;
+      text-align: center;
+      font-size: .9em;
+      height: 2em;
+      width: 3.85em;
+      display: inline-block;
+      border-radius: 3px;
+      vertical-align: center;
+      background-color: whitesmoke;
+      padding: 0em;
+    }
+    
+    .hopSelect {
+      margin: .02em 0em 0em .5em;
+      border: solid #555 1px;
+      font-size: .9em;
+      border-radius: 3px;
+    }
+
+    .hopWeight {
+      margin: 0em 0em 0em .5em;
+      border: solid #555 1px;
+      text-align:center;
+      font-size: .9em;
+      width: 4em;
+      height: 2em;
+      display: inline-block;
+      border-radius: 3px;
+      vertical-align: center;
+      background-color: whitesmoke;
+    }
+    
+      #hopButtons {
+      display: inline-block;
+      }  
+      
+        #hopAdd, #hopRemove, #calcHopBill {
+          display: inline-block;
+          margin: .1em 0em .4em .4em;
+        }
+    
+    #titleDryHops {
+      text-align: center;
+    }
+
+
+  #rawMaterialsFooter2 {
+    margin: -.1em auto 0em auto;
+    padding: 0em;
+    width: 50em;
+    height: .3em;
+    background-color: rgb(239, 187, 0);
+    background-color: rgba(239, 187, 0, 0.95); 
+    box-shadow: 0 1px 1px 0 #888;
+  }
+
+
+  
+  
+#mashLauter {
+  margin: 1em auto 1em auto;
+  width: 50em;
+  overflow: hidden;
+  box-shadow: 0 1px 1px 0 #888;
+}  
+  
+  #mashLauterHeader {
+    margin: -1.3em 0em -1em 0em;
+    padding: 0em;
+    width: 50em;
+    height: 1.8em;
+    vertical-align: top;
+    background-color:rgb(92, 184, 92);
+    background-color: rgba(92, 184, 92, 0.95);
+  }
+    
+    #titleMash {
+      text-align: center;
+    }
+  
+  #mashLauterBody {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    margin-top:1em;
+  }
+  
+    .mashProfiles {
+      margin: 0em 0em 0em 0em;
+      width: 50em;
+      min-height: 1.5em;
+      vertical-align: top;
+    }
+      
+      #infusionMash {
+        display: inline-block;
+        float: left;
+        width: 33.333%;
+        text-align: center;
+      }
+          
+          #infusionMash p, #stepMash p, #decoctionMash p {
+            margin: 0em;
+          }
+          
+          #titleInfusionMash {
+            border-right: solid #888 1px;
+            border-bottom: solid #888 1px;
+          }
+          
+          #titleInfusionMash.active {
+            border-bottom: none;
+          }
+          
+          #titleInfusionMash:hover, #titleStepMash:hover, #titleDecoctionMash:hover  {
+            cursor: pointer;
+          }
+        
+          #infusionProfile  {
+            min-height: 8em;
+            width: 50em;
+            margin: 0em;
+            text-align: left;
+            border-bottom: solid #888 1px;
+          }
+          
+            #infusionStrikeWaterDiv, #infusionMashInDiv {
+              display: inline-block;
+              height: 100%;
+              width: 25%;
+              text-align: center;
+              float: left;
+            }
+            
+              #infusionStrikeWaterDiv p, #infusionMashInDiv p{
+                margin-top: 1.5em;
+              }
+            
+              #infusionStrikeWaterBox, #infusionMashInBox {
+                margin: 1.5em 0em 0em .5em;
+                border: solid #555 1px;
+                text-align:center;
+                font-size: .9em;
+                width: 6em;
+                height: 1.91em;
+                display: inline-block;
+                border-radius: 3px;
+                vertical-align: center;
+                background-color: whitesmoke;
+              }
+            
+            #sachRestDiv {
+              display: inline-block;
+              height: 100%;
+              width: 25%;
+              text-align: center;
+              float: left;
+            }
+            
+              #sachRestDiv p:nth-child(1) {
+                margin-top: 1.5em;
+              }
+              
+              #sachRestDiv p:nth-child(2) {
+                margin-top: -1.1em;
+                text-align: center;
+                font-size: .5em;
+              }
+            
+              #infusionSachRestTemp {
+                margin: .9em 0em 0em 0em;
+                border: solid #555 1px;
+                text-align:center;
+                font-size: .9em;
+                width: 6em;
+                height: 1.8em;
+                display: inline-block;
+                border-radius: 3px;
+                vertical-align: center;
+                background-color: whitesmoke;
+              }
+              
+              #infusionSachRestTemp:focus {
+                outline: none;
+                border-color: #0593ff;
+              }
+            
+            #mashOutDiv {
+              display: inline-block;
+              height: 100%;
+              width: 25%;
+              text-align: center;
+              float: right;
+            }
+            
+              #mashOutDiv p {
+                margin:1.5em 0em 0em 0em;
+              }
+            
+              #mashOutDiv div {
+                display: inline-block;
+                width: 2em;
+                height: 1.5em;
+                margin: .5em auto 0em auto;
+                border: solid #555 1px;
+                background-color: whitesmoke;
+                text-align: center;
+              }
+              
+              #mashOutYes.active, #mashOutNo.active {
+                width: 4em;
+              }
+              
+              #mashOutYes:hover, #mashOutNo:hover {
+                cursor: pointer;
+              }
+              
+              #mashOutDiv div p {
+                margin: -.1em auto 0em auto;
+                font-size: .9em;
+              }
+              
+              #mashOutValue {
+                margin: .2em 0em 0em 0em;
+                border: solid #555 1px;
+                text-align:center;
+                font-size: .9em;
+                width: 6em;
+                height: 1.8em;
+                display: inline-block;
+                border-radius: 3px;
+                vertical-align: center;
+                background-color: whitesmoke;
+              }
+              
+              #mashOutValue:focus{
+                outline: none;
+                border-color: #0593ff;
+              }
+      
+      #stepMash, #decoctionMash {
+        display: inline-block;
+        float: left;
+        width: 33.333%;
+        text-align: center;
+      }
+      
+      #decoctionMash {
+        float: right;
+      }
+
+          #stepProfile, #decoctionProfile {
+            min-height: 8em;
+            width: 50em;
+            margin-left: -16.7em;
+            border-bottom: solid #888 1px;
+            overflow: hidden;
+          }
+          
+          #decoctionProfile {
+            margin-left: -33.3em;
+          }
+          
+          #stepOptions, #decoctionOptions {
+          width: 50em;
+          height: 6em;
+          margin: 0em;
+          padding: 0em;
+          display: block;
+          }
+          
+          #titleStepMash {
+            border-right: solid #888 1px;
+            border-bottom: solid #888 1px;
+          }
+          
+          #titleDecoctionMash {
+            border-bottom: solid #888 1px;
+          }
+          
+          #titleStepMash.active, #titleDecoctionMash.active {
+            border-bottom: none;
+          }
+          
+            #stepProfileTitle, #decoctionProfileTitle {
+              text-align: center;
+              margin: 0em 0em -.4em 0em;
+              font-size: .9em;
+            }
+            
+            #stepMashClose, #decoctionMashClose {
+              float: right;
+              font-size: 1em;
+              margin: -.25em .2em 0em 0em;
+            }
+            
+            #stepMashClose:hover, #stepMashClose:focus, #decoctionMashClose:hover, #decoctionMashCloe:focus {
+              color: #0593ff;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            
+            #stepMashButton, #decoctionMashButton {
+              text-align:center;
+              margin: 0em  auto .2em auto;
+              width: 10em;
+            }
+            
+            #stepRaises {
+              text-align:center;
+              margin: 0em  auto .2em auto;
+              width: 30em;
+            }
+            
+            #stepRaisesTitle {
+              font-size: .9em;
+              text-align: center;
+            }
+            
+           /* #stepRaisesSteam, #stepRaisesWater {
+              display: inline-block;
+              border: solid #555 1px;
+              background-color: whitesmoke;
+              width: 3.5em;
+              height: 1.8em;
+              font-size: .7em;
+              color: black;
+              text-align: center;
+              border-radius: 3px;
+              position: relative;
+              margin: 0em  auto .2em auto;
+            } */
+            
+            #stepRaisesSteam:hover, #stepRaisesWater:hover {
+              cursor: pointer;
+            }
+            
+            #stepRaisesSteam.active, #stepRaisesWater.active {
+              width: 4em;
+            }
+            
+          #stepDoughIn, #stepBetaGluc, #stepProtein, #stepBetaAmy, #stepSach, #stepMashOut,
+          #decoctionDoughIn, #decoctionBetaGluc, #decoctionProtein, #decoctionBetaAmy, #decoctionSach, #decoctionMashOut {
+            display: inline-block;
+            width: 8em;
+            margin-bottom: 0em;
+            margin-left: .2em;
+            margin-right:.12em;
+            float: left;
+            text-align: center;
+            position: relative;
+          }
+          
+          
+            #stepDoughInDiv, #stepBetaGlucDiv, #stepProteinDiv, #stepBetaAmyDiv, #stepSachDiv, #stepMashOutDiv,
+            #decoctionDoughInDiv, #decoctionBetaGlucDiv, #decoctionProteinDiv, #decoctionBetaAmyDiv, #decoctionSachDiv, #decoctionMashOutDiv {
+              min-height: 0em;
+              width: 100%;
+              background-color: whitesmoke;
+              border-radius: 3px;
+              text-align:center;
+              font-size: .9em;
+              border: solid #555 1px;
+              overflow: hidden;
+            }
+            
+            #stepDoughInDiv.active, #stepBetaGlucDiv.active, #stepProteinDiv.active, #stepBetaAmyDiv.active, #stepSachDiv.active, #stepMashOutDiv.active, 
+            #decoctionDoughInDiv.active, #decoctionBetaGlucDiv.active, #decoctionProteinDiv.active, #decoctionBetaAmyDiv.active,#decoctionSachDiv.active, #decoctionMashOutDiv.active {
+              border: solid whitesmoke 1px;
+              background-color: #333;
+              color: whitesmoke;
+            }
+
+            #stepDoughInDiv:hover, #stepBetaGlucDiv:hover, #stepProteinDiv:hover, #stepBetaAmyDiv:hover, #stepSachDiv:hover, #stepMashOutDiv:hover, 
+            #decoctionDoughInDiv:hover, #decoctionBetaGlucDiv:hover, #decoctionProteinDiv:hover, #decoctionBetaAmyDiv:hover, #decoctionSachDiv:hover, #decoctionMashOutDiv:hover {
+              cursor: pointer;
+            }
+        
+          .stepInputs, .decoctionInputs {
+            width: 100%;
+            margin: 0em;
+            padding: 0em;
+          }
+          
+          .stepTempsDiv, .stepTimesDiv, .decoctionStepTempsDiv, .decoctionStepTimesDiv, .mashInOutputDiv, .decoctionStepWaterOutputsDiv  {
+            position: relative;
+            margin-left: 0;
+            display: inline-block;
+          }
+          
+          .inputLabel {
+            line-height: 2.1em; 
+            position: absolute; 
+            bottom: 0;
+            font-size: .9em;
+            color: black;
+          }
+          
+          .stepTemps, .stepTimes, .decoctionStepTemps, .decoctionStepTimes, .mashInOutput, .decoctionStepWaterOutputs {
+            color: transparent;
+            font-size: .8em; 
+            height: 2em; 
+            border-radius: 3px;
+            -moz-transition: 0.3s all ease;
+            -ms-transition: 0.3s all ease;
+            -o-transition: 0.3s all ease;
+            -webkit-transition: 0.3s all ease;
+            transition: 0.3s all ease;
+            border: 1px solid #555; 
+            padding: 0 .625em; 
+            margin: 0em auto;
+            width: 6em; 
+            position: relative;
+	        z-index: 2;
+            color: rgba(0,0,0,1);
+          }
+          
+          .mashInOutput, .decoctionStepWaterOutputs {
+            height: 2.3em;
+          }
+          
+          .stepTemps::-webkit-inner-spin-button, .stepTimes::-webkit-inner-spin-button, 
+          .decoctionStepTemps::-webkit-inner-spin-button, .decoctionStepTimes::-webkit-inner-spin-button,
+          .mashInOutput::-webkit-inner-spin-button,
+          .decoctionStepWaterOutputs::-webkit-inner-spin-button { 
+            -webkit-appearance: none;
+          }
+          
+          .stepTemps + .inputLabel, .stepTimes + .inputLabel,
+          .decoctionStepTemps + .inputLabel, .decoctionStepTimes + .inputLabel,
+          .mashInOutput +.inputLabel,
+          .decoctionStepWaterOutputs + .inputLabel {
+            right:  0.625em;
+          }
+          
+          .stepTemps.active, .stepTimes.active, .decoctionStepTemps.active, .decoctionStepTimes.active, .mashInOutput.active, .decoctionStepWaterOutputs.active {
+            background-color: rgba(255,255,255,.6);
+          }
+          
+          .stepTemps:focus, .stepTimes:focus, .decoctionStepTemps:focus, .decoctionStepTimes:focus, .mashInOutput:focus, .decoctionStepWaterOutputs:focus {
+            outline: none;
+            border-color: #0593ff;
+          }
+        
+        #stepDividerOne, #stepDividerTwo, #decoctionDividerOne, #decoctionDividerTwo {
+          border: 0;
+          height: 1px;
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+        
+          
+        #stepMashIn, #decoctionMashIn {
+          margin: 0em 0em .5em 0em;
+          display: block;
+          width: 50em;
+        }  
+          
+          .mashInTitle, #stepRaiseVolumesTitle, #decoctionRaiseVolumesTitle {
+            text-align: center;
+            font-size: .9em;
+            display: block;
+            padding: 0em;
+            margin: -.3em 0em .3em 0em;
+          }
+          
+          #stepRaiseVolumesSubtitle {
+            font-size: .5em;
+            text-align: center;
+            margin: -1em 0em 0em 0em;
+            padding: 0em;
+          }
+          
+          #stepStrikeTemp, #stepMashInVol, #decoctionStrikeTemp, #decoctionMashInVol {
+            display: inline-block;
+            margin: -.4em auto 0em auto;
+            width: 40%;
+          }
+          
+          #stepRaiseVolumes, #decoctionRaiseVolumes {
+            width: 50em;
+            margin: 0em 0em .5em 0em;
+          }
+          
+          .stepWaterTitle {
+            font-size: .9em;
+          }
+          
+          #stepFromDoughIn, #stepFromBetaGluc, #stepFromProtein, #stepFromBetaAmy, #stepFromStepSach,
+          #decoctionStepFromDoughIn, #decoctionStepFromBetaGluc, #decoctionStepFromProtein, #decoctionStepFromBetaAmy, #decoctionStepFromStepSach {
+            display: inline-block;
+            margin: -.4em auto 0em auto;
+            width: 8em;
+          }
+          
+           /* .stepWaterOutputs {
+              text-align: center;
+              border: solid #555 1px;
+              font-size: .9em;
+              width: 10em;
+              height: 1.8em;
+              border-radius: 3px;
+              vertical-align: center;
+              background-color: whitesmoke;
+              margin: 0em auto .3em auto;
+              padding: 0em;
+            }
+            */
+
+    
+    #mashLauterDivider {
+      border-bottom: solid #888 1px;
+      width: 100%;
+      height: .1em;
+      display: inline-block;
+      margin: 0em;
+      vertical-align: top;
+    }
+
+  #mashLauterFooter {
+    margin: -0.1em auto 0em auto;
+    padding: 0em;
+    width: 50em;
+    height: .3em;
+    background-color: rgb(239, 187, 0);
+    background-color: rgba(239, 187, 0, 0.95); 
+    box-shadow: 0 1px 1px 0 #888; 
+  }
+
+
+#boilWhirlpool {
+  margin: 0em auto 0em auto;
+  width: 50em;
+  overflow: hidden;
+  box-shadow: 0 1px 1px 0 #888;
+}
+
+  #boilWhirlpoolHeader {
+    margin: -1.3em 0em -1em 0em;
+    padding: 0em;
+    width: 50em;
+    height: 1.8em;
+    background-color:rgb(92, 184, 92);
+    background-color: rgba(92, 184, 92, 0.95);
+  }
+  
+  #titleBoil {
+    text-align: center;
+  }
+  
+  #boilWhirlpoolBody {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+  }
+  
+  #boilWhirlpoolFooter {
+    margin: -.1em auto 0em auto;
+    padding: 0em;
+    width: 50em;
+    height: .3em;
+    background-color: rgb(239, 187, 0);
+    background-color: rgba(239, 187, 0, 0.95); 
+    box-shadow: 0 1px 1px 0 #888; 
+  }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 66%;
+    height: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-body {
+  padding: .125em 1em;
+  width: 95%;
+  height:79.5%;
+  overflow: scroll;
+}
+
+/* Add Animation */
+-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: .125em 1em;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body p {
+  margin-top: 0em;
+  text-align: center;
+}
+
+.modal-body div {
+  margin: 0em;
+  display: inline-block;
+  text-align: center;
+}
+
+#modalBHEOutputDiv {
+  margin: 0em;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+
+.modal-body h4 {
+  margin-bottom: 0em;
+  margin-top: -.5em;
+  text-align: center;
+}
+.modal-body h6 {
+  margin: -.1em;
+  text-align: center;
+}
+
+.modal-body div p {
+  margin: 0em .2em -.1em 0em;
+  display: block;
+  text-align: center;
+  
+}
+
+.modal-body div input {
+  margin-top: 0em;
+  display: block;
+  text-align: center;
+}
+
+.modal-footer {
+    padding: .5em 1em;
+    background-color: #5cb85c;
+    color: white;
+}
+
