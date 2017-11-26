@@ -220,31 +220,31 @@
                       <p class="skill">jQuery</p>
                       <p class="skill-level">Advanced</p>
                   </div>
-                  <div class="squares even" id="six">
+                  <div class="squares odd" id="five">
                       <p class="skill">Responsive Web Design</p>
                       <p class="skill-level">Advanced</p>
                   </div>
-                  <div class="squares odd" id="six">
-                      <p class="skill">Git & GitHub/p>
+                  <div class="squares even" id="six">
+                      <p class="skill">Git & GitHub </p>
                       <p class="skill-level">Intermediate</p>
                   </div>
-                  <div class="squares odd" id="six">
+                  <div class="squares odd" id="seven">
                       <p class="skill">Python</p>
                       <p class="skill-level">Intermediate</p>
                   </div>
-                  <div class="squares odd" id="five">
+                  <div class="squares even" id="eight">
                       <p class="skill">PHP</p>
                       <p class="skill-level">Proficient</p>
                   </div>
-                  <div class="squares even" id="six">
+                  <div class="squares odd" id="nine">
                       <p class="skill">mySQL</p>
                       <p class="skill-level">Proficient</p>
                   </div>
-                  <div class="squares even" id="six">
+                  <div class="squares even" id="ten">
                       <p class="skill">APIs</p>
                       <p class="skill-level">Proficient</p>
                   </div>
-                  <div class="squares even" id="six">
+                  <div class="squares odd" id="eleven">
                       <p class="skill">Bootstrap</p>
                       <p class="skill-level">Proficient</p>
                   </div>

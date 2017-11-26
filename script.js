@@ -132,15 +132,15 @@ function layoutAdjustForBigerScreen() {
 
 function alternatingBlocks() {
     if($(window).width() < 850 ) {
-        $("#one, #four, #five").css("background-color", "#404551");
-        $("#one, #four, #five").css("border-color", "#404551");
-        $("#two, #three, #six").css("background-color", "#ff9244");
-        $("#two, #three, #six").css("border-color", "#ff9244");
+        $("#one, #four, #five, #eight, #nine, #twelve").css("background-color", "#404551");
+        $("#one, #four, #five, #eight, #nine, #twelve").css("border-color", "#404551");
+        $("#two, #three, #six, #seven, #ten, #eleven").css("background-color", "#ff9244");
+        $("#two, #three, #six, #seven, #ten, #eleven").css("border-color", "#ff9244");
     } else {
-        $("#one, #four, #five").css("background-color", "");
-        $("#one, #four, #five").css("border-color", "");
-        $("#two, #three, #six").css("background-color", "");
-        $("#two, #three, #six").css("border-color", "");
+        $("#one, #four, #five, #eight, #nine, #twelve").css("background-color", "");
+        $("#one, #four, #five, #eight, #nine, #twelve").css("border-color", "");
+        $("#two, #three, #six, #seven, #ten, #eleven").css("background-color", "");
+        $("#two, #three, #six, #seven, #ten, #eleven").css("border-color", "");
     }
 }
 

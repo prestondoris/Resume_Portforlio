@@ -106,7 +106,7 @@
 
 .icon {
     width: 3rem;
-    border: solid 1px #404551; 
+    border: solid 1px #404551;
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
@@ -208,7 +208,7 @@
 }
 
 .icon:hover {
-    
+
 }
 
 
@@ -230,7 +230,7 @@
     position:absolute;
     z-index: 1;
     margin: 0;
-} 
+}
 
 
 #title-container{
@@ -347,7 +347,7 @@
     background-color:#f7dba7;
     opacity: 0.9;
     position:absolute;
-    margin: 0;   
+    margin: 0;
 }
 
 
@@ -526,6 +526,7 @@
 .skill {
     font-size: 200%;
     padding: 1rem;
+    text-align: center;
 }
 
 .skill-level {
@@ -549,7 +550,7 @@
     background-color: #404551;
     opacity: 0.6;
     position:absolute;
-    margin: 0;  
+    margin: 0;
 }
 
 #experience-container {
@@ -595,7 +596,7 @@
 .timeline ul li:last-child {
     background-color: transparent;
 }
- 
+
 
 .timeline ul li div {
     position: relative;
@@ -632,7 +633,7 @@
 .timeline ul li:nth-child(odd) div {
     left: 0rem;
 }
- 
+
 
 .timeline ul li:nth-child(even) div {
     left: -35rem;
@@ -831,7 +832,7 @@
         padding-right: 0rem;
         padding-left: 0rem;
     }
-    
+
     #profession {
         font-size: 2.5rem;
         padding-right: 0rem;
@@ -843,14 +844,14 @@
     .timeline ul li div {
         width: 23rem;
     }
-    
+
     .timeline ul li:nth-child(even) div {
         left: -23rem;
     }
-    
+
     .timeline ul li {
         height: 17rem;
-    }  
+    }
 }
 
 @media screen and (max-width: 1037px) {
@@ -874,42 +875,42 @@
     }
 }
 
-@media screen and (max-width: 992px) { 
+@media screen and (max-width: 992px) {
     #contact {
         display: none;
     }
-    
+
     #title-container {
         width: 100%;
         top: 20%;
     }
-    
+
     #name {
         font-size: 3.5rem;
         padding-right: 0rem;
         padding-left: 0rem;
     }
-    
+
     #profession {
         font-size: 2rem;
         padding-right: 0rem;
         padding-left: 0rem;
         text-align: center;
     }
-    
+
     #headshot-container {
         width: 100%;
         top: 20%;
         text-align: center;
     }
-    
+
     #headshot-border {
         float: none;
         right: 0%;
         margin: 0 auto;
         width: 17rem;
         height: 17rem;
-        
+
     }
 
     #headshot {
@@ -918,12 +919,12 @@
         position: relative;
         top: .34rem;
     }
-    
+
     .about-content {
         width: 95%;
         display:block;
     }
-    
+
     #about-two {
         padding-top: 1rem;
     }
@@ -951,52 +952,52 @@
     .col-m-10 {width: 83.33%; !important}
     .col-m-11 {width: 91.66%; !important}
     .col-m-12 {width: 100%; !important}
-    
+
     #my-navbar {
       display: none;
     }
-    
+
     .icon {
         display: block;
     }
-    
+
     #home-body-container {
         width: 100%;
         background-image: url('images/landing-jumbotron_media.jpg');
         background-attachment: scroll;
         margin: 0;
     }
-    
+
     #education-body-container {
         width: 100%;
         background-image: url('images/study_media.jpeg');
         background-attachment: scroll;
         margin: 0;
     }
-    
+
     #resume-btn {
         cursor: pointer;
         background-color: #ff9244;
         border: solid 1px #404551;
     }
-    
+
     .timeline ul li {
         margin-left: 1rem;
     }
-    
+
     .timeline ul li div {
         width: 33rem;
     }
-    
+
     .timeline ul li:nth-child(even) div {
         left: 0rem;
         text-align: justify;
     }
-    
+
     .timeline ul li:nth-child(odd) div {
         text-align: justify;
     }
-    
+
     .timeline ul li div h4:first-child {
         font-size: 1.4rem;
         text-align: left;
@@ -1013,14 +1014,14 @@
 
     .timeline ul li div p:nth-child(4) {
         font-size: .9rem;
-    }  
-    
+    }
+
     #contact-container > div:first-child {
         border-bottom: solid #f7dba7 1px;
         border-right: none;
         height: 100%;
     }
-    
+
     #contact-container > div:last-child {
         border-top: solid #f7dba7 1px;
         border-left: none;
@@ -1043,22 +1044,22 @@
     .col-9 {width: 75%; !important}
     .col-10 {width: 83.33%; !important}
     .col-11 {width: 91.66%; !important}
-    .col-12 {width: 100%; !important}  
-    
+    .col-12 {width: 100%; !important}
+
     #dropdown-list {
         display: none;
-    }   
+    }
 }
 
 @media screen and (max-width: 610px) {
     .timeline ul li.active {
         height: 19rem;
     }
-    
+
     .timeline ul li div {
         width: 21.8rem;
     }
-    
+
 }
 
 @media screen and (max-width: 567px) {
@@ -1087,7 +1088,7 @@
         width: 2.5rem;
         left: 5%;
     }
-    
+
     #udemy div div:nth-child(2) p:nth-child(1), #udemy div div:nth-child(2) p:nth-child(4) {
         font-size: 100%;
     }
@@ -1095,20 +1096,16 @@
     #udemy div div:nth-child(2) p:nth-child(2), #udemy div div:nth-child(2) p:nth-child(5) {
         font-size: 80%;
     }
-    
+
     #brand {
         font-size: 1rem;
     }
-    
+
     #resume-btn {
         font-size: 1rem;
     }
-    
+
     .timeline ul li {
         margin-left: 1rem;
     }
 }
-
-
-
-
