@@ -130,8 +130,20 @@
           <div class="col-10 col-m-10" id="about-container">
               <p class="section-title" id="title-about">About Me</p>
               <span><hr class="underline"></span><br><br>
-              <p class="about-content" id="about-two">I graduated from Cal Poly San Luis Obispo in 2010 with a Mathematics degree. As part of my degree I took programming courses in C++ and Java where I first learned to code. After graduating, I pursued a passion for brewing beer by obtaining a Diploma in Brewing Technology and Science from UC Davis Extension. I have worked diligently for 5 years in the Brewing Industry to become the Production Manager at a local Regional Brewery in the Bay Area.  </p>
-              <p class="about-content" id="about-two">During that time, I reignited a passion for programming by building websites designed around and relating to beer. My skills include: HTML5, CSS3, Responsive Web Design, Bootstrap, JavaScript, jQuery, PHP, MySQL, Node.JS, Express, and MongoDB through online courses hosted by Udemy, Udacity, and Codecademy. I continue to push myself so as to continually build on my knowledge base to create a quality user experiences and effective web solutions. </p>
+              <p class="about-content" id="about-two">
+                  I graduated from Cal Poly San Luis Obispo in 2010 with a Mathematics degree. As part of my
+                  degree I took programming courses in C++ and Java where I first learned to code. After
+                  graduating, I pursued a passion for brewing beer by obtaining a Diploma in Brewing Technology
+                  and Science from UC Davis Extension. I have worked diligently for 5 years in the Brewing
+                  Industry to become the Production Manager at a local Regional Brewery in the Bay Area.  
+              </p>
+              <p class="about-content" id="about-two">
+                  During that time, I reignited a passion for programming by building websites designed around
+                  and relating to beer. My skills include: HTML5, CSS3, JavaScript, jQuery, Git & Github,
+                  Responsive Web Design, Bootstrap, Python, PHP, MySQL, APIs, and through online courses hosted
+                  by Udemy, Udacity, and Codecademy. I continue to push myself so as to continually learn new
+                  skills to create quality user experiences andeffective web solutions.
+              </p>
           </div>
       </div>
 
