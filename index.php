@@ -53,8 +53,7 @@
 
   </head>
   <body>
-      <nav class="topnav" id="myTopnav">
-
+      <header class="topnav" id="myTopnav">
           <div class="col-3 col-m-6" id="brand">
               <button type="button" class="icon" id="button">
                   <hr class="collapsed-icon">
@@ -64,7 +63,7 @@
               <span><a id="brand-link" href="#home"><img id="brand-logo" src="images/LOGO2.png"></a></span>
           </div>
 
-          <div class="col-6" id="my-navbar">
+          <nav class="col-6" id="my-navbar">
               <ul id="nav-bar-list">
                   <li><a class="link" id="about" href="#about-anchor">About</a></li>
                   <li><a class="link" id="education" href="#education-anchor">Education</a></li>
@@ -73,7 +72,6 @@
                       <span class="link" id="portfolio">Portfolio</span>
                       <div class="dropdown-content">
                           <a class="link" id="your-app" href="yourApp/your_app.html">YourApp</a>
-                          <!--<a class="link" id="the-coding-grounds" href="#">theCodingGrounds</a>-->
                           <a class="link" id="weather" href="Weather/">Weather</a>
                           <a class="link" id="recipe" href="RecipeBuilder/">Recipe Builder (Alpha)</a>
                           <a class="link" id="color-game" href="ColorGame/color.html">RGB Color Game</a>
@@ -81,32 +79,32 @@
                   </li>
                   <li><a class="link" id="contact" href="#contact-anchor">Contact</a></li>
               </ul>
-          </div>
+          </nav>
 
           <div class="col-3 col-m-6" id="buttons">
               <a href="Resume/Preston%20Doris%20Resume.pdf"><button type="button" id="resume-button">Download Resume</button></a>
           </div>
+      </header>
 
-      </nav>
-      <div class="clear"></div>
-      <div id="dropdown-list">
+      <section class="clear"></section>
+
+      <section id="dropdown-list">
           <div class='col-m-12 dropdown-list-link'><a class="link" id="media-about" href="#about-anchor">About</a></div>
           <div class='col-m-12 dropdown-list-link'><a class="link" id="media-education" href="#education-anchor">Education</a></div>
           <div class='col-m-12 dropdown-list-link'><a class="link" id="media-experience" href="#experience-anchor">Experience</a></div>
           <div class="col-m-12 dropdown-list-link" id="media-portfolio-div"><span class="link" id="media-portfolio">Portfolio</span></div>
           <div class="col-m-12 media-portfolio-dropdown">
               <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-your-app" href="yourApp/your_app.html">YourApp</a></div>
-              <!-- <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-the-coding-grounds" href="#">theCodingGrounds</a></div>-->
               <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-weather" href="Weather/">Weather</a></div>
               <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-recipe" href="RecipeBuilder/">Recipe Builder (Alpha)</a></div>
               <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-color" href="ColorGame/color.html">RGB Color Game</a></div>
           </div>
           <div class='col-m-12 dropdown-list-link'><a class="link" id="media-contact" href="#contact-anchor">Contact</a></div>
-      </div>
+      </section>
 
       <div class="clear" id="home"></div>
 
-      <div id="home-body-container">
+      <section id="home-body-container">
           <div id='content-header-transbox'></div>
 
           <div class="col-6" id="title-container">
@@ -120,7 +118,7 @@
                   <img id="headshot" src="images/2%20copy.jpg" >
               </div>
           </div>
-      </div>
+      </section>
 
 
 
