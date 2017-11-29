@@ -84,272 +84,266 @@
           <div class="col-3 col-m-6" id="buttons">
               <a href="Resume/Preston%20Doris%20Resume.pdf"><button type="button" id="resume-button">Download Resume</button></a>
           </div>
+
+          <section id="dropdown-list">
+              <div class='col-m-12 dropdown-list-link'><a class="link" id="media-about" href="#about-anchor">About</a></div>
+              <div class='col-m-12 dropdown-list-link'><a class="link" id="media-education" href="#education-anchor">Education</a></div>
+              <div class='col-m-12 dropdown-list-link'><a class="link" id="media-experience" href="#experience-anchor">Experience</a></div>
+              <div class="col-m-12 dropdown-list-link" id="media-portfolio-div"><span class="link" id="media-portfolio">Portfolio</span></div>
+              <div class="col-m-12 media-portfolio-dropdown">
+                  <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-your-app" href="yourApp/your_app.html">YourApp</a></div>
+                  <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-weather" href="Weather/">Weather</a></div>
+                  <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-recipe" href="RecipeBuilder/">Recipe Builder (Alpha)</a></div>
+                  <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-color" href="ColorGame/color.html">RGB Color Game</a></div>
+              </div>
+              <div class='col-m-12 dropdown-list-link'><a class="link" id="media-contact" href="#contact-anchor">Contact</a></div>
+          </section>
       </header>
-
-      <section class="clear"></section>
-
-      <section id="dropdown-list">
-          <div class='col-m-12 dropdown-list-link'><a class="link" id="media-about" href="#about-anchor">About</a></div>
-          <div class='col-m-12 dropdown-list-link'><a class="link" id="media-education" href="#education-anchor">Education</a></div>
-          <div class='col-m-12 dropdown-list-link'><a class="link" id="media-experience" href="#experience-anchor">Experience</a></div>
-          <div class="col-m-12 dropdown-list-link" id="media-portfolio-div"><span class="link" id="media-portfolio">Portfolio</span></div>
-          <div class="col-m-12 media-portfolio-dropdown">
-              <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-your-app" href="yourApp/your_app.html">YourApp</a></div>
-              <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-weather" href="Weather/">Weather</a></div>
-              <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-recipe" href="RecipeBuilder/">Recipe Builder (Alpha)</a></div>
-              <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-color" href="ColorGame/color.html">RGB Color Game</a></div>
-          </div>
-          <div class='col-m-12 dropdown-list-link'><a class="link" id="media-contact" href="#contact-anchor">Contact</a></div>
-      </section>
 
       <div class="clear" id="home"></div>
 
-      <section id="home-body-container">
-          <div id='content-header-transbox'></div>
+      <main>
+          <section id="home-body-container">
+              <div id='content-header-transbox'></div>
+              <section class="col-6" id="title-container">
+                  <h1 id="name">Preston Doris</h1>
+                  <hr class="divider">
+                  <h4 id="profession">Web Developer</h4>
+              </section>
 
-          <div class="col-6" id="title-container">
-              <h1 id="name">Preston Doris</h1>
-              <hr class="divider">
-              <h4 id="profession">Web Developer</h4>
-          </div>
-
-          <div class="col-6" id="headshot-container">
-              <div id="headshot-border">
-                  <img id="headshot" src="images/2%20copy.jpg" >
-              </div>
-          </div>
-      </section>
-
-
-
-      <div class="clear" id="about-anchor"></div>
-
-      <div class="col-12" id="about-body-container">
-          <div class="col-10 col-m-10" id="about-container">
-              <p class="section-title" id="title-about">About Me</p>
-              <span><hr class="underline"></span><br><br>
-              <p class="about-content" id="about-two">
-                  I graduated from Cal Poly San Luis Obispo in 2010 with a Mathematics degree. As part of my
-                  degree I took programming courses in C++ and Java where I first learned to code. After
-                  graduating, I pursued a passion for brewing beer by obtaining a Diploma in Brewing Technology
-                  and Science from UC Davis Extension. I have worked diligently for 5 years in the Brewing
-                  Industry to become the Production Manager at a local Regional Brewery in the Bay Area.
-              </p>
-              <p class="about-content" id="about-two">
-                  During that time, I reignited a passion for programming by building websites designed around
-                  and relating to beer. My skills include: HTML5, CSS3, JavaScript, jQuery, Git & Github,
-                  Responsive Web Design, Bootstrap, Python, PHP, MySQL, and APIs through online courses hosted
-                  by Udacity, Udemy, and Codecademy. I continue to push myself so as to continually learn new
-                  skills to create quality user experiences and effective web solutions.
-              </p>
-          </div>
-      </div>
-
-
-
-      <div class="clear" id="education-anchor"></div>
-
-      <div class="col-12" id="education-body-container">
-          <div id="education-body-transbox"></div>
-          <div class="col-10 col-m-10" id="education-container">
-              <p class="section-title" id="title-education">Education</p>
-              <span><hr class="underline"></span><br><br>
-
-              <div class="insitution-set">
-                  <div class="institution" id="cal-poly">
-                      <div class="flip">
-                          <div class="box front">
-                              <img src="images/CP_Logo.png" class="institution-img" id="cp-logo" />
-                          </div>
-                          <div class="box back">
-                              <p><strong>Bachelor of Science:<br>Mathematics</strong></p>
-                              <p>2006 - 2010</p>
-                          </div>
-                      </div>
+              <figure class="col-6" id="headshot-container">
+                  <div id="headshot-border">
+                      <img id="headshot" src="images/2%20copy.jpg" alt="Headshot of Preston Doris">
                   </div>
-                  <div class="institution" id="udemy">
-                      <div class="flip">
-                          <div class="box front">
-                              <img src="images/udemy-logo.png" class="institution-img" id="udemy-logo"  />
-                          </div>
-                          <div class="box back">
-                              <p>Complete Web Developer Course 2.0</p>
-                              <p>2017</p>
-                              <hr id="ed-divider">
-                              <p>The Web Developer Bootcamp</p>
-                              <p>2017</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="institution" id="cca">
-                      <div class="flip">
-                          <div class="box front">
-                              <img src="images/CCA-logo.png" class="institution-img" id="cca-logo" />
-                          </div>
-                          <div class="box back">
-                              <p><strong>Certificate: Level 1</strong></p>
-                              <p>HTML - CSS - Javascript</p>
-                              <p>jQuery - PHP</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="institution" id="codecademy">
-                      <div class="flip">
-                          <div class="box front">
-                              <img src="images/cc-logo.png" class="institution-img" id="cc-logo" />
-                          </div>
-                          <div class="box back">
-                              <p><strong>Courses:</strong></p>
-                              <p>Learn HTML - Learn CSS</p>
-                              <p>Learn Javascript - Make a Website</p>
-                          </div>
-                      </div>
-                  </div>
+              </figure>
+          </section>
 
-              </div>
-          </div>
-          <div class="col-10 col-m-10" id="skillset-container">
-              <div id="title-skillset">
-                  <p class="section-title">Skillsets</p>
-                  <hr class="underline">
-              </div>
-              <div class="col-12" id="my-skills">
-                  <div class="squares odd" id="one">
-                      <p class="skill">HTML5</p>
-                      <p class="skill-level">Advanced</p>
-                  </div>
-                  <div class="squares even" id="two">
-                      <p class="skill">CCS3</p>
-                      <p class="skill-level">Advanced</p>
-                  </div>
-                  <div class="squares odd" id="three">
-                      <p class="skill">JavaScript</p>
-                      <p class="skill-level">Advanced</p>
-                  </div>
-                  <div class="squares even" id="four">
-                      <p class="skill">jQuery</p>
-                      <p class="skill-level">Advanced</p>
-                  </div>
-                  <div class="squares odd" id="five">
-                      <p class="skill">Responsive Web Design</p>
-                      <p class="skill-level">Advanced</p>
-                  </div>
-                  <div class="squares even" id="six">
-                      <p class="skill">Git & GitHub </p>
-                      <p class="skill-level">Intermediate</p>
-                  </div>
-                  <div class="squares odd" id="seven">
-                      <p class="skill">Python</p>
-                      <p class="skill-level">Intermediate</p>
-                  </div>
-                  <div class="squares even" id="eight">
-                      <p class="skill">PHP</p>
-                      <p class="skill-level">Proficient</p>
-                  </div>
-                  <div class="squares odd" id="nine">
-                      <p class="skill">mySQL</p>
-                      <p class="skill-level">Proficient</p>
-                  </div>
-                  <div class="squares even" id="ten">
-                      <p class="skill">APIs</p>
-                      <p class="skill-level">Proficient</p>
-                  </div>
-                  <div class="squares odd" id="eleven">
-                      <p class="skill">Bootstrap</p>
-                      <p class="skill-level">Proficient</p>
-                  </div>
-              </div>
-          </div>
-      </div>
+          <div class="clear" id="about-anchor"></div>
 
+          <section class="col-12" id="about-body-container">
+              <article class="col-10 col-m-10" id="about-container">
+                  <h3 class="section-title" id="title-about">About Me</h3>
+                  <span><hr class="underline"></span><br><br>
+                  <p class="about-content" id="about-two">
+                      I graduated from Cal Poly San Luis Obispo in 2010 with a Mathematics degree. As part of my
+                      degree I took programming courses in C++ and Java where I first learned to code. After
+                      graduating, I pursued a passion for brewing beer by obtaining a Diploma in Brewing Technology
+                      and Science from UC Davis Extension. I have worked diligently for 5 years in the Brewing
+                      Industry to become the Production Manager at a local Regional Brewery in the Bay Area.
+                  </p>
+                  <p class="about-content" id="about-two">
+                      During that time, I reignited a passion for programming by building websites designed around
+                      and relating to beer. My skills include: HTML5, CSS3, JavaScript, jQuery, Git & Github,
+                      Responsive Web Design, Bootstrap, Python, PHP, MySQL, and APIs through online courses hosted
+                      by Udacity, Udemy, and Codecademy. I continue to push myself so as to continually learn new
+                      skills to create quality user experiences and effective web solutions.
+                  </p>
+              </article>
+          </section>
 
+          <div class="clear" id="education-anchor"></div>
 
-      <div class="clear" id="experience-anchor"></div>
+          <section class="col-12" id="education-body-container">
+              <div id="education-body-transbox"></div>
+              <section class="col-10 col-m-10" id="education-container">
+                  <h3 class="section-title" id="title-education">Education</h3>
+                  <span><hr class="underline"></span><br><br>
 
-      <div class="col-12 col-m-12" id="experience-body-container">
-          <div id="experience-body-transbox"></div>
-          <div class="col-10 col-m-10" id="experience-container">
-              <p class="section-title" id="title-experience">Experience</p>
-              <span><hr class="underline"></span><br><br>
-              <div class="timeline">
-                  <ul>
-                      <li>
-                          <div class="in-view">
-                              <h4>Web Developer</h4>
-                              <h4>Independent</h4>
-                              <p>June 2016 - Present</p>
-                              <p>My Web Developement education has focused on all aspects of Front End developing. I am in the process of building a web based Beer Recipe Builder that has been invaluable in my Education to become a Developer. I am capable of tackling any Front End development need including Responsive Web Design. My Back End skills are still a work in progress, and currently consist of PHP and mySQL. Please check out my Portfolio to see other projects I have completed.</p>
+                  <section class="insitution-set">
+                      <figure class="institution" id="cal-poly">
+                          <div class="flip">
+                              <div class="box front">
+                                  <img src="images/CP_Logo.png" class="institution-img" id="cp-logo" alt="Cal Poly University logo">
+                              </div>
+                              <div class="box back">
+                                  <p><strong>Bachelor of Science:<br>Mathematics</strong></p>
+                                  <p>2006 - 2010</p>
+                              </div>
                           </div>
-                      </li>
-                      <li>
-                          <div class="in-view">
-                              <h4>Production Manager</h4>
-                              <h4>21st Amendment Brewery</h4>
-                              <p>November 2016 - Present</p>
-                              <p>I manage and oversee all beer production, packaging, and shipping from two facilities on opposite sides of the country through 10% growth year over year. I manage 8 direct reports and am currently the acting Packaging Manager in addition to my current duties. </p>
-                          </div>
-                      </li>
-                      <li>
-                          <div class="in-view">
-                              <h4>Head Brewer</h4>
-                              <h4>21st Amendment Brewery</h4>
-                              <p>December 2015 - November 2016</p>
-                              <p>I developed an algorithm that accurately calculated beer recipes in a production environment. The algorithm was accurate from batch to batch and it took into accounte the variations in raw materials from our suppliers</p>
-                          </div>
-                      </li>
-                      <li>
-                          <div class="in-view">
-                              <h4>Brewery Operations Supervisor</h4>
-                              <h4>21st Amendment Brewery</h4>
-                              <p>January 2015 - December 2015</p>
-                              <p>I managed 100% of all production at our off site Partner Brewery through 30% growth year over year, and was responsible for all shipping logistics for the company.</p>
-                          </div>
-                      </li>
-                      <li>
-                          <div class="in-view">
-                              <h4>Brewery Production Assistant</h4>
-                              <h4>21st Amendment Brewery</h4>
-                              <p>April 2013 - January 2015</p>
-                              <p>While managing all shipping logistics through 40% growth year over year, I developed mulitple Excel algorithms to display specific trends in production and shipping all of which are actively used today.</p>
-                          </div>
-                      </li>
-                      <li>
-                          <div class="in-view">
-                              <h4>Brewer</h4>
-                              <h4>Lagunitas Brewing Company</h4>
-                              <p>June 2012 - April 2013</p>
-                              <p>I worked in a production environment advancing my technical skills for future roles. </p>
-                          </div>
-                      </li>
-                      <li >
-                          <div class="in-view">
-                              <h4>Instructional Assistant II</h4>
-                              <h4>Clovis Unified School District</h4>
-                              <p>February 2011 - December 2011</p>
-                              <p>I assisted in a Special Education classroom teaching English and Mathematics to Special Needs students.</p>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
+                      </figure>
 
+                      <figure class="institution" id="udemy">
+                          <div class="flip">
+                              <div class="box front">
+                                  <img src="images/udemy-logo.png" class="institution-img" id="udemy-logo" alt="Udemy logo">
+                              </div>
+                              <div class="box back">
+                                  <p>Complete Web Developer Course 2.0</p>
+                                  <p>2017</p>
+                                  <hr id="ed-divider">
+                                  <p>The Web Developer Bootcamp</p>
+                                  <p>2017</p>
+                              </div>
+                          </div>
+                      </figure>
 
+                      <figure class="institution" id="cca">
+                          <div class="flip">
+                              <div class="box front">
+                                  <img src="images/CCA-logo.png" class="institution-img" id="cca-logo" alt="Cambridge Certification Authority logo">
+                              </div>
+                              <div class="box back">
+                                  <p><strong>Certificate: Level 1</strong></p>
+                                  <p>HTML - CSS - Javascript</p>
+                                  <p>jQuery - PHP</p>
+                              </div>
+                          </div>
+                      </figure>
+
+                      <figure class="institution" id="codecademy">
+                          <div class="flip">
+                              <div class="box front">
+                                  <img src="images/cc-logo.png" class="institution-img" id="cc-logo" alt="Codecademy logo">
+                              </div>
+                              <div class="box back">
+                                  <p><strong>Courses:</strong></p>
+                                  <p>Learn HTML - Learn CSS</p>
+                                  <p>Learn Javascript - Make a Website</p>
+                              </div>
+                          </div>
+                      </figure>
+                  </section>
+              </section>
+
+              <section class="col-10 col-m-10" id="skillset-container">
+                  <div id="title-skillset">
+                      <h3 class="section-title">Skillsets</h3>
+                      <hr class="underline">
+                  </div>
+                  <section class="col-12" id="my-skills">
+                      <figure class="squares odd" id="one">
+                          <p class="skill">HTML5</p>
+                          <p class="skill-level">Advanced</p>
+                      </figure>
+                      <figure class="squares even" id="two">
+                          <p class="skill">CCS3</p>
+                          <p class="skill-level">Advanced</p>
+                      </figure>
+                      <figure class="squares odd" id="three">
+                          <p class="skill">JavaScript</p>
+                          <p class="skill-level">Advanced</p>
+                      </figure>
+                      <figure class="squares even" id="four">
+                          <p class="skill">jQuery</p>
+                          <p class="skill-level">Advanced</p>
+                      </figure>
+                      <figure class="squares odd" id="five">
+                          <p class="skill">Responsive Web Design</p>
+                          <p class="skill-level">Advanced</p>
+                      </figure>
+                      <figure class="squares even" id="six">
+                          <p class="skill">Git & GitHub </p>
+                          <p class="skill-level">Intermediate</p>
+                      </figure>
+                      <figure class="squares odd" id="seven">
+                          <p class="skill">Python</p>
+                          <p class="skill-level">Intermediate</p>
+                      </figure>
+                      <figure class="squares even" id="eight">
+                          <p class="skill">PHP</p>
+                          <p class="skill-level">Proficient</p>
+                      </figure>
+                      <figure class="squares odd" id="nine">
+                          <p class="skill">mySQL</p>
+                          <p class="skill-level">Proficient</p>
+                      </figure>
+                      <figure class="squares even" id="ten">
+                          <p class="skill">APIs</p>
+                          <p class="skill-level">Proficient</p>
+                      </figure>
+                      <figure class="squares odd" id="eleven">
+                          <p class="skill">Bootstrap</p>
+                          <p class="skill-level">Proficient</p>
+                      </figure>
+                  </section>
+              </section>
+          </section>
+
+          <div class="clear" id="experience-anchor"></div>
+
+          <section class="col-12 col-m-12" id="experience-body-container">
+              <div id="experience-body-transbox"></div>
+              <section class="col-10 col-m-10" id="experience-container">
+                  <h3 class="section-title" id="title-experience">Experience</h3>
+                  <span><hr class="underline"></span><br><br>
+                  <article class="timeline">
+                      <ul>
+                          <li>
+                              <div class="in-view">
+                                  <h4>Web Developer</h4>
+                                  <h4>Independent</h4>
+                                  <p>June 2016 - Present</p>
+                                  <p>My Web Developement education has focused on all aspects of Front End developing. I am in the process of building a web based Beer Recipe Builder that has been invaluable in my Education to become a Developer. I am capable of tackling any Front End development need including Responsive Web Design. My Back End skills are still a work in progress, and currently consist of PHP and mySQL. Please check out my Portfolio to see other projects I have completed.</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="in-view">
+                                  <h4>Production Manager</h4>
+                                  <h4>21st Amendment Brewery</h4>
+                                  <p>November 2016 - Present</p>
+                                  <p>I manage and oversee all beer production, packaging, and shipping from two facilities on opposite sides of the country through 10% growth year over year. I manage 8 direct reports and am currently the acting Packaging Manager in addition to my current duties. </p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="in-view">
+                                  <h4>Head Brewer</h4>
+                                  <h4>21st Amendment Brewery</h4>
+                                  <p>December 2015 - November 2016</p>
+                                  <p>I developed an algorithm that accurately calculated beer recipes in a production environment. The algorithm was accurate from batch to batch and it took into accounte the variations in raw materials from our suppliers</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="in-view">
+                                  <h4>Brewery Operations Supervisor</h4>
+                                  <h4>21st Amendment Brewery</h4>
+                                  <p>January 2015 - December 2015</p>
+                                  <p>I managed 100% of all production at our off site Partner Brewery through 30% growth year over year, and was responsible for all shipping logistics for the company.</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="in-view">
+                                  <h4>Brewery Production Assistant</h4>
+                                  <h4>21st Amendment Brewery</h4>
+                                  <p>April 2013 - January 2015</p>
+                                  <p>While managing all shipping logistics through 40% growth year over year, I developed mulitple Excel algorithms to display specific trends in production and shipping all of which are actively used today.</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="in-view">
+                                  <h4>Brewer</h4>
+                                  <h4>Lagunitas Brewing Company</h4>
+                                  <p>June 2012 - April 2013</p>
+                                  <p>I worked in a production environment advancing my technical skills for future roles. </p>
+                              </div>
+                          </li>
+                          <li >
+                              <div class="in-view">
+                                  <h4>Instructional Assistant II</h4>
+                                  <h4>Clovis Unified School District</h4>
+                                  <p>February 2011 - December 2011</p>
+                                  <p>I assisted in a Special Education classroom teaching English and Mathematics to Special Needs students.</p>
+                              </div>
+                          </li>
+                      </ul>
+                  </article>
+              </section>
+          </section>
+      </main>
 
       <div class="clear" id="contact-anchor"></div>
 
-      <div class="col-12 col-m-12" id="contact-body-container">
-          <div id="title-contact">
+      <footer class="col-12 col-m-12" id="contact-body-container">
+          <section id="title-contact">
               <div class="col-10 col-m-10">
-                  <p class="section-title" id="test">Contact</p>
+                  <h3 class="section-title" id="test">Contact</h3>
                   <span><hr class="underline"></span>
               </div>
-
-          </div>
+          </section>
 
           <div class="clear"></div>
-          <div class="col-10" id="contact-container">
-              <div class="col-6 col-m-12">
+
+          <section class="col-10" id="contact-container">
+              <section class="col-6 col-m-12">
                   <form class="col-12" method="post">
                       <div class="col-12 col-m-12 form-container">
                           <input type="text" class="col-5-8 col-m-5-8 form-input" name="form-name" id="form-name" placeholder="Name"/>
@@ -364,17 +358,17 @@
                       <button type="submit" id="form-button">Submit</button>
                   </form>
                   <div class="col-12" id="form-confirmation"> <? echo $error.$successMessage ?> </div>
-              </div>
-              <div class="col-6 col-m-12" id="contact-info-container">
+              </section>
+              <section class="col-6 col-m-12" id="contact-info-container">
                   <div class="col-12 col-m-12">
                       <h1>Preston Doris</h1>
                       <h3>Web Developer</h3>
                       <p><strong>Phone:</strong><br>(925) 519-5071</p>
                       <p><strong>Email:</strong><br>preston@prestondoris.com</p>
                   </div>
-              </div>
-          </div>
-      </div>
+              </section>
+          </section>
+      </footer>
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
       <script src="script.js" tyep="text/javascript"></script>
 
