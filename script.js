@@ -130,6 +130,7 @@ function layoutAdjustForBigerScreen() {
     } else {}
 }
 
+
 function alternatingBlocks() {
     if($(window).width() < 850 ) {
         $("#one, #four, #five, #eight, #nine, #twelve").css("background-color", "#404551");

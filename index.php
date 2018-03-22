@@ -73,8 +73,9 @@
                       <div class="dropdown-content">
                           <a class="link" id="your-app" href="yourApp/your_app.html">YourApp</a>
                           <a class="link" id="weather" href="Weather/">Weather</a>
-                          <a class="link" id="recipe" href="RecipeBuilder/">Recipe Builder (Alpha)</a>
+                          <a class="link" id="itemcatalog" target="blank" href="http://ec2-54-187-198-181.us-west-2.compute.amazonaws.com/">Item Catalog</a>
                           <a class="link" id="color-game" href="ColorGame/color.html">RGB Color Game</a>
+                          <a class="link" id="color-game" href="NeighborhoodMap/index.html">Neighborhood Map</a>
                       </div>
                   </li>
                   <li><a class="link" id="contact" href="#contact-anchor">Contact</a></li>
@@ -82,7 +83,7 @@
           </nav>
 
           <div class="col-3 col-m-6" id="buttons">
-              <a href="Resume/Preston%20Doris%20Resume.pdf"><button type="button" id="resume-button">Download Resume</button></a>
+              <a href="Resume/Preston%20Doris%20Resume.pdf" target="blank"><button type="button" id="resume-button">Download Resume</button></a>
           </div>
 
           <section id="dropdown-list">
@@ -93,8 +94,9 @@
               <div class="col-m-12 media-portfolio-dropdown">
                   <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-your-app" href="yourApp/your_app.html">YourApp</a></div>
                   <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-weather" href="Weather/">Weather</a></div>
-                  <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-recipe" href="RecipeBuilder/">Recipe Builder (Alpha)</a></div>
+                  <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-item" taget="blank" href="http://ec2-54-187-198-181.us-west-2.compute.amazonaws.com/">Item Catalog</a></div>
                   <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-color" href="ColorGame/color.html">RGB Color Game</a></div>
+                  <div class="col-m-12 dropdown-list-link media-portfolio"><a class="link" id="media-color" href="NeighborhoodMap/index.html">Neightborhood Map</a></div>
               </div>
               <div class='col-m-12 dropdown-list-link'><a class="link" id="media-contact" href="#contact-anchor">Contact</a></div>
           </section>
@@ -108,7 +110,7 @@
               <section class="col-6" id="title-container">
                   <h1 id="name">Preston Doris</h1>
                   <hr class="divider">
-                  <h4 id="profession">Web Developer</h4>
+                  <h4 id="profession">Full Stack Software Engineer</h4>
               </section>
 
               <figure class="col-6" id="headshot-container">
@@ -125,18 +127,23 @@
                   <h3 class="section-title" id="title-about">About Me</h3>
                   <span><hr class="underline"></span><br><br>
                   <p class="about-content" id="about-two">
-                      I graduated from Cal Poly San Luis Obispo in 2010 with a Mathematics degree. As part of my
-                      degree I took programming courses in C++ and Java where I first learned to code. After
-                      graduating, I pursued a passion for brewing beer by obtaining a Diploma in Brewing Technology
-                      and Science from UC Davis Extension. I have worked diligently for 5 years in the Brewing
-                      Industry to become the Production Manager at a local Regional Brewery in the Bay Area.
+                      I’m a Full Stack Software Engineer who loves to create new and unique tools
+                      to help and improve how people do what they already do. I’m developing a web app
+                      uniquely designed for both professional and home brewers alike that allows them to
+                      create and manage beer production from recipe development to fished beer. I’d love
+                      to contribute my software development skills to a project that is working to create
+                      something new and unique that people use every day. To date I have built and
+                      launched performant and beautiful websites from the ground up. One such project took
+                      a baseline Ubuntu Amazon Web Services server and configured
                   </p>
                   <p class="about-content" id="about-two">
-                      During that time, I reignited a passion for programming by building websites designed around
-                      and relating to beer. My skills include: HTML5, CSS3, JavaScript, jQuery, Git & Github,
-                      Responsive Web Design, Bootstrap, Python, PHP, MySQL, and APIs through online courses hosted
-                      by Udacity, Udemy, and Codecademy. I continue to push myself so as to continually learn new
-                      skills to create quality user experiences and effective web solutions.
+                      it into an Apache Web server and PostgreSQL database server, which hosted a Brewery Catalog app that
+                      utilizes the Flask framework in Python and authenticates via Google’s OAuth API.
+                      My participation in the Full Stack Web Developer Nanodegree program from Udacity has
+                      bolstered my skills and provided me with a diverse set of web development skills. I
+                      have worked professionally in the beer industry for 6+ years and my professional skills
+                      honed at 21st Amendment Brewery, paired with 2+ years of web development experience provide
+                      me with a broad set of skills that can be applied to any project.
                   </p>
               </article>
           </section>
@@ -150,14 +157,17 @@
                   <span><hr class="underline"></span><br><br>
 
                   <section class="insitution-set">
-                      <figure class="institution" id="cal-poly">
+                      <figure class="institution" id="udacity">
                           <div class="flip">
                               <div class="box front">
-                                  <img src="images/CP_Logo.png" class="institution-img" id="cp-logo" alt="Cal Poly University logo">
+                                  <img src="images/udacity-logo.png" class="institution-img" id="udacity-logo" alt="Udacity logo">
                               </div>
                               <div class="box back">
-                                  <p><strong>Bachelor of Science:<br>Mathematics</strong></p>
-                                  <p>2006 - 2010</p>
+                                  <p>Full Stack Web Developer Nanodegree</p>
+                                  <p>2018</p>
+                                  <hr id="ed-divider">
+                                  <p>Grow with Google Scholarship</p>
+                                  <p>2018</p>
                               </div>
                           </div>
                       </figure>
@@ -173,6 +183,18 @@
                                   <hr id="ed-divider">
                                   <p>The Web Developer Bootcamp</p>
                                   <p>2017</p>
+                              </div>
+                          </div>
+                      </figure>
+
+                      <figure class="institution" id="cal-poly">
+                          <div class="flip">
+                              <div class="box front">
+                                  <img src="images/CP_Logo.png" class="institution-img" id="cp-logo" alt="Cal Poly University logo">
+                              </div>
+                              <div class="box back">
+                                  <p><strong>Bachelor of Science:<br>Mathematics</strong></p>
+                                  <p>2006 - 2010</p>
                               </div>
                           </div>
                       </figure>
@@ -213,47 +235,45 @@
                   <section class="col-12" id="my-skills">
                       <figure class="squares odd" id="one">
                           <p class="skill">HTML5</p>
-                          <p class="skill-level">Advanced</p>
                       </figure>
                       <figure class="squares even" id="two">
                           <p class="skill">CCS3</p>
-                          <p class="skill-level">Advanced</p>
                       </figure>
                       <figure class="squares odd" id="three">
                           <p class="skill">JavaScript</p>
-                          <p class="skill-level">Advanced</p>
                       </figure>
                       <figure class="squares even" id="four">
                           <p class="skill">jQuery</p>
-                          <p class="skill-level">Advanced</p>
                       </figure>
                       <figure class="squares odd" id="five">
                           <p class="skill">Responsive Web Design</p>
-                          <p class="skill-level">Advanced</p>
                       </figure>
                       <figure class="squares even" id="six">
                           <p class="skill">Git & GitHub </p>
-                          <p class="skill-level">Intermediate</p>
                       </figure>
                       <figure class="squares odd" id="seven">
                           <p class="skill">Python</p>
-                          <p class="skill-level">Intermediate</p>
                       </figure>
                       <figure class="squares even" id="eight">
-                          <p class="skill">PHP</p>
-                          <p class="skill-level">Proficient</p>
+                          <p class="skill">Flask Framework</p>
                       </figure>
                       <figure class="squares odd" id="nine">
-                          <p class="skill">mySQL</p>
-                          <p class="skill-level">Proficient</p>
+                          <p class="skill">PHP</p>
                       </figure>
                       <figure class="squares even" id="ten">
-                          <p class="skill">APIs</p>
-                          <p class="skill-level">Proficient</p>
+                          <p class="skill">PostgreSQL</p>
                       </figure>
                       <figure class="squares odd" id="eleven">
+                          <p class="skill">mySQL</p>
+                      </figure>
+                      <figure class="squares even" id="twelve">
+                          <p class="skill">SQLAlchemy</p>
+                      </figure>
+                      <figure class="squares odd" id="thirteen">
+                          <p class="skill">APIs</p>
+                      </figure>
+                      <figure class="squares even" id="fourteen">
                           <p class="skill">Bootstrap</p>
-                          <p class="skill-level">Proficient</p>
                       </figure>
                   </section>
               </section>
@@ -272,7 +292,7 @@
                               <div class="in-view">
                                   <h4>Web Developer</h4>
                                   <h4>Independent</h4>
-                                  <p>June 2016 - Present</p>
+                                  <p>September 2015 - Present</p>
                                   <p>My Web Developement education has focused on all aspects of Front End developing. I am in the process of building a web based Beer Recipe Builder that has been invaluable in my Education to become a Developer. I am capable of tackling any Front End development need including Responsive Web Design. My Back End skills are still a work in progress, and currently consist of PHP and mySQL. Please check out my Portfolio to see other projects I have completed.</p>
                               </div>
                           </li>
@@ -362,7 +382,7 @@
               <section class="col-6 col-m-12" id="contact-info-container">
                   <div class="col-12 col-m-12">
                       <h1>Preston Doris</h1>
-                      <h3>Web Developer</h3>
+                      <h3>Full Stack Software Engineer</h3>
                       <p><strong>Phone:</strong><br>(925) 519-5071</p>
                       <p><strong>Email:</strong><br>preston@prestondoris.com</p>
                   </div>

@@ -447,8 +447,18 @@
     color: #f7dba7;
 }
 
-#udemy div div:nth-child(2) p:nth-child(2), #udemy div div:nth-child(2) p:nth-child(5) {
+#udemy div div:nth-child(2) p:nth-child(2), #udemy div div:nth-child(2) p:nth-child(5)  {
     font-size: 90%;
+    color: #ff9244;
+}
+
+#udacity div div:nth-child(2) p:nth-child(1), #udacity div div:nth-child(2) p:nth-child(4) {
+    font-size: 105%;
+    color: #f7dba7;
+}
+
+#udacity div div:nth-child(2) p:nth-child(2), #udacity div div:nth-child(2) p:nth-child(5)  {
+    font-size:85%;
     color: #ff9244;
 }
 
@@ -495,7 +505,7 @@
 #my-skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 44rem;
     overflow: hidden;
     float: none;
@@ -504,13 +514,14 @@
 }
 
 .squares {
-    width: 22rem;
-    height: 22rem;
+    width: 18rem;
+    height: 18rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 6;
+    opacity: .7;
 }
 
 .odd {
@@ -526,14 +537,9 @@
 }
 
 .skill {
-    font-size: 200%;
+    font-size: 250%;
     padding: 1rem;
     text-align: center;
-}
-
-.skill-level {
-    font-size: 300%;
-    padding: 1rem;
 }
 
 #experience-body-container {
@@ -813,19 +819,15 @@
     }
 
     .squares {
-        width: 18rem;
-        height: 18rem;
+        width: 15rem;
+        height: 15rem;
     }
 
     .skill {
-        font-size: 160%;
+        font-size: 200%;
         padding: 1rem;
     }
 
-    .skill-level {
-        font-size: 245%;
-        padding: 1rem;
-    }
 }
 
 @media screen and (max-width: 1209px) {
