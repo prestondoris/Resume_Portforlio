@@ -60,89 +60,89 @@ function Brewery(obj) {
 
 
 var ViewModel = function(success) {
-        var self = this;
+    var self = this;
 
-        self.breweryList = ko.observableArray([]);
-        self.showAside = ko.observable(true);
-        self.hideAside = ko.observable(false);
-        self.hide = ko.observable(false);
-        self.inputHide = ko.observable(false);
-        self.error = ko.observable(false);
-        self.errorMessage = ko.observable();
-        if(!success) {
-            self.error(true);
-            self.errorMessage('There was an error loading the locations.'+
-                                        'Please try again later.');
-            self.hideAside(true);
-            self.inputHide(true);
-            self.showAside(false);
-        }
+    self.breweryList = ko.observableArray([]);
+    self.showAside = ko.observable(true);
+    self.hideAside = ko.observable(false);
+    self.hide = ko.observable(false);
+    self.inputHide = ko.observable(false);
+    self.error = ko.observable(false);
+    self.errorMessage = ko.observable();
+    if(!success) {
+        self.error(true);
+        self.errorMessage('There was an error loading the locations.'+
+                                    'Please try again later.');
+        self.hideAside(true);
+        self.inputHide(true);
+        self.showAside(false);
+    }
 
 
-        for(var i=0; i<model.length; i++) {
-            self.breweryList.push(new Brewery(model[i]));
-        }
+    for(var i=0; i<model.length; i++) {
+        self.breweryList.push(new Brewery(model[i]));
+    }
 
-        // This will filter the results in the list of items in breweryList
-        self.input = ko.pureComputed({
-            read: function() {
-                return "";
-            },
-            write: function(value) {
-                var id;
-                if(value === "") {
-                    for(var i=0; i<self.breweryList().length; i++) {
-                        self.breweryList()[i].visible(true);
-                        id = self.breweryList()[i].id();
-                        initMap.marker[id-1].setMap(initMap.map);
-                    }
-                } else {
-                    for(var j=0; j<self.breweryList().length; j++) {
-                        if(self.breweryList()[j].name().search(value) == -1) {
-                            self.breweryList()[j].visible(false);
-                            id = self.breweryList()[j].id();
-                            initMap.marker[id-1].setMap(null);
-                        }
+    // This will filter the results in the list of items in breweryList
+    self.input = ko.pureComputed({
+        read: function() {
+            return "";
+        },
+        write: function(value) {
+            var id;
+            if(value === "") {
+                for(var i=0; i<self.breweryList().length; i++) {
+                    self.breweryList()[i].visible(true);
+                    id = self.breweryList()[i].id();
+                    initMap.markers[id-1].setMap(initMap.map);
+                }
+            } else {
+                for(var j=0; j<self.breweryList().length; j++) {
+                    if(self.breweryList()[j].name().search(value) == -1) {
+                        self.breweryList()[j].visible(false);
+                        id = self.breweryList()[j].id();
+                        initMap.markers[id-1].setMap(null);
                     }
                 }
             }
-        });
+        }
+    });
 
-        self.newVenue = function(item) {
-            populateModel(item.value);
-        };
+    self.newVenue = function(item) {
+        populateModel(item.value);
+    };
 
-        self.toggleAsideDetails = function() {
-            if(self.showAside() === false) {
-                self.hide(false);
-                self.inputHide(false);
-                self.hideAside(false);
-                self.showAside(true);
-            } else {
-                self.hide(true);
-                self.inputHide(true);
-                self.hideAside(true);
-                self.showAside(false);
-            }
-        };
+    self.toggleAsideDetails = function() {
+        if(self.showAside() === false) {
+            self.hide(false);
+            self.inputHide(false);
+            self.hideAside(false);
+            self.showAside(true);
+        } else {
+            self.hide(true);
+            self.inputHide(true);
+            self.hideAside(true);
+            self.showAside(false);
+        }
+    };
 
-        self.enableMarker = function(item) {
-            // get the id of the item in the breweryList observable array
-            var id = item.id() - 1;
-            initMap.markers[id].setIcon(initMap.setMarker('ffa600'));
-        };
+    self.enableMarker = function(item) {
+        // get the id of the item in the breweryList observable array
+        var id = item.id() - 1;
+        initMap.markers[id].setIcon(initMap.setMarker('ffa600'));
+    };
 
-        self.disableMarker = function(item) {
-            var id = item.id() - 1;
-            initMap.markers[id].setIcon(initMap.setMarker('2ccd89'));
-        };
+    self.disableMarker = function(item) {
+        var id = item.id() - 1;
+        initMap.markers[id].setIcon(initMap.setMarker('2ccd89'));
+    };
 
-        self.showInfoWindow = function(item) {
-            var id = item.id()-1;
-            var info = initMap.getModelInfo(model[id]);
-            initMap.setInfoWindow(info, initMap.markers[id]);
-            initMap.showInfoWindow(initMap.markers[id], info.location);
-        };
+    self.showInfoWindow = function(item) {
+        var id = item.id()-1;
+        var info = initMap.getModelInfo(model[id]);
+        initMap.setInfoWindow(info, initMap.markers[id]);
+        initMap.showInfoWindow(initMap.markers[id], info.location);
+    };
 
 
 };

@@ -145,6 +145,15 @@ function alternatingBlocks() {
     }
 }
 
+
+function isEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+}
+
+var items = document.querySelectorAll(".timeline li");
+
+
 function isShowing(el) {
     if($(el).is(":visible")) {
         return true;
@@ -153,12 +162,6 @@ function isShowing(el) {
     }
 }
 
-function isEmail(email) {
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return regex.test(email);
-}
-
-var items = document.querySelectorAll(".timeline li");
 
 // check if an element is in viewport
 function isElementInViewport(element) {
